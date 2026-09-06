@@ -1,0 +1,62 @@
+<header class="header">
+  <div class="header__container">
+
+    <a class="header__brand" routerLink="/">
+      <span class="header__logo">AD</span>
+
+      <div class="header__brand-text">
+        <strong>Centro Educativo AD</strong>
+        <span>Aprende · Avanza · Alcanza</span>
+      </div>
+    </a>
+
+    <nav class="header__nav">
+      <a routerLink="/">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#modalidades">Modalidades</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a
+      class="header__cta"
+      href="https://wa.me/525588357806?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20las%20clases%20del%20Centro%20Educativo%20AD."
+      target="_blank"
+      rel="noopener"
+    >
+      Solicitar información
+    </a>
+
+    <button
+      class="header__menu-button"
+      type="button"
+      aria-label="Abrir menú"
+      (click)="toggleMenu()"
+    >
+      ☰
+    </button>
+
+  </div>
+
+  @if (menuOpen()) {
+    <nav class="header__mobile-nav">
+      <a routerLink="/" (click)="closeMenu()">Inicio</a>
+      <a href="#nosotros" (click)="closeMenu()">Nosotros</a>
+      <a href="#servicios" (click)="closeMenu()">Servicios</a>
+      <a href="#modalidades" (click)="closeMenu()">Modalidades</a>
+      <a href="#cursos" (click)="closeMenu()">Cursos</a>
+      <a href="#contacto" (click)="closeMenu()">Contacto</a>
+
+      <a
+        class="header__mobile-cta"
+        href="https://wa.me/525588357806?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20las%20clases%20del%20Centro%20Educativo%20AD."
+        target="_blank"
+        rel="noopener"
+      >
+        Solicitar información
+      </a>
+    </nav>
+  }
+
+</header>
