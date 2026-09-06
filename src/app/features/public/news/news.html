@@ -1,0 +1,212 @@
+<main class="news-page">
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+  <section class="news-hero">
+
+    <div
+      class="news-hero__watermark"
+      aria-hidden="true"
+    >
+      AD
+    </div>
+
+    <div class="news-hero__container">
+
+      <span class="news-hero__eyebrow">
+        Actualidad / Centro Educativo AD
+      </span>
+
+      <h1>
+        Lo nuevo
+        <span>en AD.</span>
+      </h1>
+
+      <p>
+        Un espacio para compartir novedades, actividades,
+        avisos y contenido relevante del Centro Educativo AD.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       INTRO / FILTROS
+  ====================================================== -->
+  <section class="news-content">
+
+    <div class="news-content__container">
+
+      <div class="news-content__top">
+
+        <div>
+
+          <span class="news-section-label">
+            Archivo de novedades
+          </span>
+
+          <h2>
+            Noticias organizadas
+            <span>por mes.</span>
+          </h2>
+
+        </div>
+
+
+        <p>
+          Conforme publiquemos nuevas actividades e información,
+          podrás encontrarlas aquí de forma cronológica.
+        </p>
+
+      </div>
+
+
+      <!-- =================================================
+           FILTROS
+           Por ahora son visuales.
+           Después los conectamos con Angular.
+      ================================================== -->
+      <div class="news-filters">
+
+        <button
+          class="news-filter news-filter--active"
+          type="button"
+        >
+          Todas
+        </button>
+
+        <button
+          class="news-filter"
+          type="button"
+        >
+          Centro AD
+        </button>
+
+        <button
+          class="news-filter"
+          type="button"
+        >
+          ECOEMS
+        </button>
+
+        <button
+          class="news-filter"
+          type="button"
+        >
+          Universidad
+        </button>
+
+        <button
+          class="news-filter"
+          type="button"
+        >
+          Inglés AD
+        </button>
+
+      </div>
+
+
+      <!-- =================================================
+           MES
+      ================================================== -->
+      <section class="news-month">
+
+        <div class="news-month__header">
+
+          <div>
+
+            <span>
+              2026 / 09
+            </span>
+
+            <h2>
+              Septiembre
+              <strong>2026</strong>
+            </h2>
+
+          </div>
+
+          <span class="news-month__status">
+            Actualidad
+          </span>
+
+        </div>
+
+
+        <!-- ===============================================
+             CONTENEDOR DE NOTICIAS
+
+             Después Angular generará aquí las tarjetas.
+        ================================================ -->
+        <div class="news-grid">
+
+  @for (article of news; track article.id) {
+
+    <article class="news-card">
+
+      <div class="news-card__index">
+        0{{ $index + 1 }}
+      </div>
+
+
+      <div class="news-card__empty-content">
+
+        <span>
+          {{ article.category }}
+        </span>
+
+        <h3>
+          {{ article.title }}
+        </h3>
+
+        <p>
+          {{ article.excerpt }}
+        </p>
+
+
+        <div class="news-card__date">
+          {{ article.date }}
+        </div>
+
+      </div>
+
+    </article>
+
+  }
+
+</div>
+
+      </section>
+
+
+      <!-- =================================================
+           ARCHIVO FUTURO
+      ================================================== -->
+      <div class="news-archive">
+
+        <div>
+
+          <span>
+            Archivo
+          </span>
+
+          <strong>
+            Los meses anteriores aparecerán aquí.
+          </strong>
+
+        </div>
+
+        <span aria-hidden="true">
+          ↓
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>

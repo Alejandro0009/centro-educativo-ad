@@ -36,36 +36,48 @@
     <!-- =====================================================
          DESKTOP NAV
     ====================================================== -->
-    <nav
-      class="header__nav"
-      aria-label="Navegación principal"
-    >
+   <nav
+  class="header__nav"
+  aria-label="Navegación principal"
+>
 
-      <a href="#inicio">
-        Inicio
-      </a>
+  <a routerLink="/">
+    Inicio
+  </a>
 
-      <a href="#nosotros">
-        Nosotros
-      </a>
+  <a
+    routerLink="/"
+    fragment="nosotros"
+  >
+    Nosotros
+  </a>
 
-      <a href="#servicios">
-        Servicios
-      </a>
+  <a
+    routerLink="/"
+    fragment="servicios"
+  >
+    Servicios
+  </a>
 
-      <a href="#modalidades">
-        Modalidades
-      </a>
+  <a
+    routerLink="/"
+    fragment="programas"
+  >
+    Programas
+  </a>
 
-      <a href="#programas">
-        Programas
-      </a>
+  <a routerLink="/noticias">
+    Noticias
+  </a>
 
-      <a href="#ubicacion">
-        Ubicación
-      </a>
+  <a
+    routerLink="/"
+    fragment="ubicacion"
+  >
+    Ubicación
+  </a>
 
-    </nav>
+</nav>
 
 
     <!-- =====================================================
@@ -124,55 +136,59 @@
 
         <nav>
 
-          <a
-            href="#inicio"
-            (click)="closeMenu()"
-          >
-            <span>01</span>
-            Inicio
-          </a>
+  <a
+    routerLink="/"
+    (click)="closeMenu()"
+  >
+    <span>01</span>
+    Inicio
+  </a>
 
-          <a
-            href="#nosotros"
-            (click)="closeMenu()"
-          >
-            <span>02</span>
-            Nosotros
-          </a>
+  <a
+    routerLink="/"
+    fragment="nosotros"
+    (click)="closeMenu()"
+  >
+    <span>02</span>
+    Nosotros
+  </a>
 
-          <a
-            href="#servicios"
-            (click)="closeMenu()"
-          >
-            <span>03</span>
-            Servicios
-          </a>
+  <a
+    routerLink="/"
+    fragment="servicios"
+    (click)="closeMenu()"
+  >
+    <span>03</span>
+    Servicios
+  </a>
 
-          <a
-            href="#modalidades"
-            (click)="closeMenu()"
-          >
-            <span>04</span>
-            Modalidades
-          </a>
+  <a
+    routerLink="/"
+    fragment="programas"
+    (click)="closeMenu()"
+  >
+    <span>04</span>
+    Programas
+  </a>
 
-          <a
-            href="#programas"
-            (click)="closeMenu()"
-          >
-            <span>05</span>
-            Programas
-          </a>
+  <a
+    routerLink="/noticias"
+    (click)="closeMenu()"
+  >
+    <span>05</span>
+    Noticias
+  </a>
 
-          <a
-            href="#ubicacion"
-            (click)="closeMenu()"
-          >
-            <span>06</span>
-            Ubicación
-          </a>
+  <a
+    routerLink="/"
+    fragment="ubicacion"
+    (click)="closeMenu()"
+  >
+    <span>06</span>
+    Ubicación
+  </a>
 
-        </nav>
+</nav>
 
 
         <a
