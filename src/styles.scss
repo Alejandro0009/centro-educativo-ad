@@ -1,3 +1,16 @@
+:root {
+  --bg-main: #f4f6f8;
+  --bg-soft: #eef2f6;
+  --surface: #ffffff;
+
+  --text-primary: #111827;
+  --text-secondary: #64748b;
+
+  --dark: #111827;
+  --dark-soft: #1f2937;
+
+  --border: #dde3ea;
+}
 * {
   box-sizing: border-box;
 }
@@ -16,6 +29,6 @@ body {
     'Segoe UI',
     sans-serif;
 
-  background: #ffffff;
-  color: #111827;
-}/* You can add global styles to this file, and also import other style files */
+  background: var(--bg-main);
+  color: var(--text-primary);
+}

@@ -1,62 +1,211 @@
-<header class="header">
+<header
+  class="header"
+  [class.header--scrolled]="scrolled()"
+>
+
   <div class="header__container">
 
-    <a class="header__brand" routerLink="/">
-      <span class="header__logo">AD</span>
+    <!-- =====================================================
+         BRAND
+    ====================================================== -->
+    <a
+      class="header__brand"
+      routerLink="/"
+      (click)="closeMenu()"
+    >
 
-      <div class="header__brand-text">
-        <strong>Centro Educativo AD</strong>
-        <span>Aprende · Avanza · Alcanza</span>
+      <div class="header__monogram">
+        <span>AD</span>
       </div>
+
+      <div class="header__brand-copy">
+
+        <strong>
+          Centro Educativo AD
+        </strong>
+
+        <span>
+          Aprende · Avanza · Alcanza
+        </span>
+
+      </div>
+
     </a>
 
-    <nav class="header__nav">
-      <a routerLink="/">Inicio</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#modalidades">Modalidades</a>
-      <a href="#cursos">Cursos</a>
-      <a href="#contacto">Contacto</a>
+
+    <!-- =====================================================
+         DESKTOP NAV
+    ====================================================== -->
+    <nav
+      class="header__nav"
+      aria-label="Navegación principal"
+    >
+
+      <a href="#inicio">
+        Inicio
+      </a>
+
+      <a href="#nosotros">
+        Nosotros
+      </a>
+
+      <a href="#servicios">
+        Servicios
+      </a>
+
+      <a href="#modalidades">
+        Modalidades
+      </a>
+
+      <a href="#programas">
+        Programas
+      </a>
+
+      <a href="#ubicacion">
+        Ubicación
+      </a>
+
     </nav>
 
+
+    <!-- =====================================================
+         CTA
+    ====================================================== -->
     <a
       class="header__cta"
-      href="https://wa.me/525588357806?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20las%20clases%20del%20Centro%20Educativo%20AD."
+      href="https://wa.me/525588357806?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Centro%20Educativo%20AD."
       target="_blank"
       rel="noopener"
     >
-      Solicitar información
+
+      <span>
+        Contacto
+      </span>
+
+      <i aria-hidden="true">
+        ↗
+      </i>
+
     </a>
 
+
+    <!-- =====================================================
+         MOBILE BUTTON
+    ====================================================== -->
     <button
       class="header__menu-button"
       type="button"
       aria-label="Abrir menú"
+      [attr.aria-expanded]="menuOpen()"
       (click)="toggleMenu()"
     >
-      ☰
+
+      <span></span>
+      <span></span>
+
     </button>
 
   </div>
 
-  @if (menuOpen()) {
-    <nav class="header__mobile-nav">
-      <a routerLink="/" (click)="closeMenu()">Inicio</a>
-      <a href="#nosotros" (click)="closeMenu()">Nosotros</a>
-      <a href="#servicios" (click)="closeMenu()">Servicios</a>
-      <a href="#modalidades" (click)="closeMenu()">Modalidades</a>
-      <a href="#cursos" (click)="closeMenu()">Cursos</a>
-      <a href="#contacto" (click)="closeMenu()">Contacto</a>
 
-      <a
-        class="header__mobile-cta"
-        href="https://wa.me/525588357806?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20las%20clases%20del%20Centro%20Educativo%20AD."
-        target="_blank"
-        rel="noopener"
-      >
-        Solicitar información
-      </a>
-    </nav>
+  <!-- =====================================================
+       MOBILE MENU
+  ====================================================== -->
+  @if (menuOpen()) {
+
+    <div class="header__mobile">
+
+      <div class="header__mobile-inner">
+
+        <div class="header__mobile-label">
+          Navegación
+        </div>
+
+
+        <nav>
+
+          <a
+            href="#inicio"
+            (click)="closeMenu()"
+          >
+            <span>01</span>
+            Inicio
+          </a>
+
+          <a
+            href="#nosotros"
+            (click)="closeMenu()"
+          >
+            <span>02</span>
+            Nosotros
+          </a>
+
+          <a
+            href="#servicios"
+            (click)="closeMenu()"
+          >
+            <span>03</span>
+            Servicios
+          </a>
+
+          <a
+            href="#modalidades"
+            (click)="closeMenu()"
+          >
+            <span>04</span>
+            Modalidades
+          </a>
+
+          <a
+            href="#programas"
+            (click)="closeMenu()"
+          >
+            <span>05</span>
+            Programas
+          </a>
+
+          <a
+            href="#ubicacion"
+            (click)="closeMenu()"
+          >
+            <span>06</span>
+            Ubicación
+          </a>
+
+        </nav>
+
+
+        <a
+          class="header__mobile-cta"
+          href="https://wa.me/525588357806?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Centro%20Educativo%20AD."
+          target="_blank"
+          rel="noopener"
+          (click)="closeMenu()"
+        >
+          Escribir por WhatsApp
+
+          <span aria-hidden="true">
+            ↗
+          </span>
+        </a>
+
+
+        <div class="header__mobile-footer">
+
+          <span>
+            AD / 2026
+          </span>
+
+          <span>
+            Huixquilucan
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
   }
 
 </header>

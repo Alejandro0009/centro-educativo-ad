@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,7 +8,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.scss'
 })
 export class Header {
+
   menuOpen = signal(false);
+  scrolled = signal(false);
 
   toggleMenu(): void {
     this.menuOpen.update(value => !value);
@@ -16,5 +18,10 @@ export class Header {
 
   closeMenu(): void {
     this.menuOpen.set(false);
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    this.scrolled.set(window.scrollY > 30);
   }
 }

@@ -1,0 +1,539 @@
+:host {
+  display: block;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    110px 32px 28px;
+
+  color: #ffffff;
+
+  border-top:
+    1px solid rgba(215, 182, 73, 0.18);
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(215, 182, 73, 0.10),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(255, 255, 255, 0.035),
+      transparent 25%
+    ),
+    linear-gradient(
+      145deg,
+      #030303,
+      #080808 55%,
+      #0d0d0d
+    );
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.26;
+
+    background-image:
+      linear-gradient(
+        rgba(255, 255, 255, 0.018) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.018) 1px,
+        transparent 1px
+      );
+
+    background-size:
+      60px 60px;
+  }
+}
+
+
+/* =========================================================
+   DECORACIÓN
+========================================================= */
+
+.footer__glow {
+  position: absolute;
+
+  left: -150px;
+  bottom: -230px;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(215, 182, 73, 0.11);
+
+  filter: blur(115px);
+
+  pointer-events: none;
+}
+
+.footer__watermark {
+  position: absolute;
+
+  right: -50px;
+  bottom: -105px;
+
+  color:
+    rgba(215, 182, 73, 0.035);
+
+  font-size:
+    clamp(280px, 35vw, 520px);
+
+  font-weight: 950;
+  line-height: 0.8;
+
+  letter-spacing: -0.12em;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.footer__container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1320px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.footer__top {
+  padding-bottom: 72px;
+
+  display: grid;
+  grid-template-columns:
+    1.4fr 0.6fr;
+
+  align-items: end;
+
+  gap: 80px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.11);
+}
+
+.footer__eyebrow {
+  color: #d7b649;
+
+  font-size: 9px;
+  font-weight: 850;
+
+  letter-spacing: 0.17em;
+
+  text-transform: uppercase;
+}
+
+.footer__statement {
+
+  h2 {
+    max-width: 850px;
+
+    margin:
+      21px 0 0;
+
+    color: #ffffff;
+
+    font-size:
+      clamp(58px, 7vw, 108px);
+
+    font-weight: 880;
+    line-height: 0.83;
+
+    letter-spacing: -0.075em;
+
+    span,
+    strong {
+      display: block;
+    }
+
+    span {
+      color: transparent;
+
+      -webkit-text-stroke:
+        1.2px rgba(255, 255, 255, 0.42);
+
+      font-weight: 820;
+    }
+
+    strong {
+      color: #f0d36f;
+
+      font-weight: 880;
+    }
+  }
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.footer__brand {
+  max-width: 280px;
+
+  justify-self: end;
+
+  p {
+    margin:
+      22px 0 0;
+
+    color:
+      rgba(255, 255, 255, 0.4);
+
+    font-size: 12px;
+    line-height: 1.75;
+  }
+}
+
+.footer__logo {
+  width: 78px;
+  height: 78px;
+
+  display: grid;
+  place-items: center;
+
+  border:
+    1px solid rgba(215, 182, 73, 0.48);
+
+  border-radius:
+    2px 24px 2px 2px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #090909,
+      #171717
+    );
+
+  color: #f0d36f;
+
+  font-size: 28px;
+  font-weight: 950;
+
+  letter-spacing: -0.07em;
+
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.28);
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease;
+
+  &:hover {
+    transform:
+      translateY(-5px)
+      rotate(-3deg);
+
+    border-color: #d7b649;
+  }
+}
+
+
+/* =========================================================
+   MIDDLE
+========================================================= */
+
+.footer__middle {
+  padding:
+    65px 0;
+
+  display: grid;
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 55px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.11);
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  > span {
+    margin-bottom: 10px;
+
+    color: #d7b649;
+
+    font-size: 8px;
+    font-weight: 850;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+  }
+
+  > a:not(.footer__whatsapp) {
+    position: relative;
+
+    color:
+      rgba(255, 255, 255, 0.5);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition:
+      color 0.25s ease,
+      transform 0.25s ease;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+
+      left: -12px;
+      top: 50%;
+
+      width: 0;
+      height: 1px;
+
+      background: #d7b649;
+
+      transition:
+        width 0.25s ease;
+    }
+
+    &:hover {
+      transform:
+        translateX(8px);
+
+      color: #f0d36f;
+
+      &::before {
+        width: 6px;
+      }
+    }
+  }
+
+  > strong {
+    color: #ffffff;
+
+    font-size: 14px;
+  }
+
+  > p {
+    max-width: 230px;
+
+    margin: 0;
+
+    color:
+      rgba(255, 255, 255, 0.37);
+
+    font-size: 11px;
+    line-height: 1.65;
+  }
+}
+
+
+/* =========================================================
+   WHATSAPP CARD
+========================================================= */
+
+.footer__whatsapp {
+  width: 100%;
+
+  min-height: 88px;
+
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(215, 182, 73, 0.32);
+
+  border-radius:
+    2px 22px 2px 2px;
+
+  background:
+    rgba(215, 182, 73, 0.045);
+
+  text-decoration: none;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+  }
+
+  small {
+    color:
+      rgba(255, 255, 255, 0.35);
+
+    font-size: 8px;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+  }
+
+  strong {
+    color: #f0d36f;
+
+    font-size: 17px;
+  }
+
+  i {
+    color: #d7b649;
+
+    font-style: normal;
+
+    font-size: 23px;
+
+    transition:
+      transform 0.3s ease;
+  }
+
+  &:hover {
+    transform:
+      translateY(-5px);
+
+    border-color: #d7b649;
+
+    background:
+      rgba(215, 182, 73, 0.09);
+
+    box-shadow:
+      0 20px 50px rgba(0, 0, 0, 0.2);
+
+    i {
+      transform:
+        translate(4px, -4px);
+    }
+  }
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.footer__bottom {
+  min-height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  color:
+    rgba(255, 255, 255, 0.24);
+
+  font-size: 8px;
+  font-weight: 720;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .footer {
+    padding:
+      90px 24px 25px;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .footer__brand {
+    justify-self: start;
+  }
+
+  .footer__middle {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 580px) {
+
+  .footer {
+    padding:
+      82px 18px 24px;
+  }
+
+  .footer__statement h2 {
+    font-size:
+      clamp(52px, 16vw, 77px);
+  }
+
+  .footer__middle {
+    grid-template-columns: 1fr;
+
+    gap: 44px;
+  }
+
+  .footer__bottom {
+    padding-top: 25px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .footer__watermark {
+    font-size: 260px;
+  }
+}
