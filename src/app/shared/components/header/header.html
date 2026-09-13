@@ -2,218 +2,422 @@
   class="header"
   [class.header--scrolled]="scrolled()"
 >
+  <div class="header__shell">
 
-  <div class="header__container">
+    <div class="header__container">
 
-    <!-- =====================================================
-         BRAND
-    ====================================================== -->
-    <a
-      class="header__brand"
-      routerLink="/"
-      (click)="closeMenu()"
-    >
+      <!-- =====================================================
+           BRAND
+      ====================================================== -->
 
-      <div class="header__monogram">
-        <span>AD</span>
+      <a
+        class="header__brand"
+        routerLink="/"
+        (click)="closeMenu()"
+        aria-label="Centro Educativo AD - Inicio"
+      >
+
+        <div class="header__monogram">
+          <span>AD</span>
+        </div>
+
+        <div class="header__brand-copy">
+
+          <strong>
+            Centro Educativo AD
+          </strong>
+
+          <span>
+            Aprende · Avanza · Alcanza
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- =====================================================
+           DESKTOP NAV
+      ====================================================== -->
+
+      <nav
+        class="header__nav"
+        aria-label="Navegación principal"
+      >
+
+        <a routerLink="/">
+          Inicio
+        </a>
+
+        <a
+          routerLink="/"
+          fragment="nosotros"
+        >
+          Nosotros
+        </a>
+
+        <a
+          routerLink="/"
+          fragment="servicios"
+        >
+          Servicios
+        </a>
+
+
+        <!-- ECOEMS DESTACADO -->
+        <a
+          routerLink="/ecoems"
+          class="header__ecoems"
+        >
+
+          <span class="header__ecoems-dot"></span>
+
+          ECOEMS
+
+        </a>
+
+
+        <a
+          routerLink="/"
+          fragment="programas"
+        >
+          Programas
+        </a>
+
+        <a routerLink="/noticias">
+          Noticias
+        </a>
+
+        <a
+          routerLink="/"
+          fragment="ubicacion"
+        >
+          Ubicación
+        </a>
+
+      </nav>
+
+
+
+      <!-- =====================================================
+           ACTIONS
+      ====================================================== -->
+
+      <div class="header__actions">
+
+        <a
+          class="header__cta"
+          href="https://wa.me/525588357806?text=Hola%20Centro%20Educativo%20AD.%0A%0AMe%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <span>
+            Contacto
+          </span>
+
+          <i aria-hidden="true">
+            ↗
+          </i>
+
+        </a>
+
+
+
+        <!-- =================================================
+             MOBILE BUTTON
+        ================================================== -->
+
+        <button
+          class="header__menu-button"
+          type="button"
+          [attr.aria-label]="menuOpen() ? 'Cerrar menú' : 'Abrir menú'"
+          [attr.aria-expanded]="menuOpen()"
+          (click)="toggleMenu()"
+        >
+
+          <span></span>
+          <span></span>
+
+        </button>
+
       </div>
 
-      <div class="header__brand-copy">
-
-        <strong>
-          Centro Educativo AD
-        </strong>
-
-        <span>
-          Aprende · Avanza · Alcanza
-        </span>
-
-      </div>
-
-    </a>
-
-
-    <!-- =====================================================
-         DESKTOP NAV
-    ====================================================== -->
-   <nav
-  class="header__nav"
-  aria-label="Navegación principal"
->
-
-  <a routerLink="/">
-    Inicio
-  </a>
-
-  <a
-    routerLink="/"
-    fragment="nosotros"
-  >
-    Nosotros
-  </a>
-
-  <a
-    routerLink="/"
-    fragment="servicios"
-  >
-    Servicios
-  </a>
-
-  <a
-    routerLink="/"
-    fragment="programas"
-  >
-    Programas
-  </a>
-
-  <a routerLink="/noticias">
-    Noticias
-  </a>
-
-  <a
-    routerLink="/"
-    fragment="ubicacion"
-  >
-    Ubicación
-  </a>
-
-</nav>
-
-
-    <!-- =====================================================
-         CTA
-    ====================================================== -->
-    <a
-      class="header__cta"
-      href="https://wa.me/525588357806?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Centro%20Educativo%20AD."
-      target="_blank"
-      rel="noopener"
-    >
-
-      <span>
-        Contacto
-      </span>
-
-      <i aria-hidden="true">
-        ↗
-      </i>
-
-    </a>
-
-
-    <!-- =====================================================
-         MOBILE BUTTON
-    ====================================================== -->
-    <button
-      class="header__menu-button"
-      type="button"
-      aria-label="Abrir menú"
-      [attr.aria-expanded]="menuOpen()"
-      (click)="toggleMenu()"
-    >
-
-      <span></span>
-      <span></span>
-
-    </button>
+    </div>
 
   </div>
+
 
 
   <!-- =====================================================
        MOBILE MENU
   ====================================================== -->
+
   @if (menuOpen()) {
 
     <div class="header__mobile">
 
       <div class="header__mobile-inner">
 
-        <div class="header__mobile-label">
-          Navegación
-        </div>
 
+        <!-- CABECERA -->
+        <div class="header__mobile-top">
 
-        <nav>
-
-  <a
-    routerLink="/"
-    (click)="closeMenu()"
-  >
-    <span>01</span>
-    Inicio
-  </a>
-
-  <a
-    routerLink="/"
-    fragment="nosotros"
-    (click)="closeMenu()"
-  >
-    <span>02</span>
-    Nosotros
-  </a>
-
-  <a
-    routerLink="/"
-    fragment="servicios"
-    (click)="closeMenu()"
-  >
-    <span>03</span>
-    Servicios
-  </a>
-
-  <a
-    routerLink="/"
-    fragment="programas"
-    (click)="closeMenu()"
-  >
-    <span>04</span>
-    Programas
-  </a>
-
-  <a
-    routerLink="/noticias"
-    (click)="closeMenu()"
-  >
-    <span>05</span>
-    Noticias
-  </a>
-
-  <a
-    routerLink="/"
-    fragment="ubicacion"
-    (click)="closeMenu()"
-  >
-    <span>06</span>
-    Ubicación
-  </a>
-
-</nav>
-
-
-        <a
-          class="header__mobile-cta"
-          href="https://wa.me/525588357806?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Centro%20Educativo%20AD."
-          target="_blank"
-          rel="noopener"
-          (click)="closeMenu()"
-        >
-          Escribir por WhatsApp
-
-          <span aria-hidden="true">
-            ↗
+          <span>
+            Navegación
           </span>
-        </a>
-
-
-        <div class="header__mobile-footer">
 
           <span>
             AD / 2026
           </span>
 
+        </div>
+
+
+
+        <!-- =================================================
+             MOBILE NAV
+        ================================================== -->
+
+        <nav>
+
+          <a
+            routerLink="/"
+            (click)="closeMenu()"
+          >
+
+            <span class="header__mobile-number">
+              01
+            </span>
+
+            <strong>
+              Inicio
+            </strong>
+
+            <i aria-hidden="true">
+              →
+            </i>
+
+          </a>
+
+
+          <a
+            routerLink="/"
+            fragment="nosotros"
+            (click)="closeMenu()"
+          >
+
+            <span class="header__mobile-number">
+              02
+            </span>
+
+            <strong>
+              Nosotros
+            </strong>
+
+            <i aria-hidden="true">
+              →
+            </i>
+
+          </a>
+
+
+          <a
+            routerLink="/"
+            fragment="servicios"
+            (click)="closeMenu()"
+          >
+
+            <span class="header__mobile-number">
+              03
+            </span>
+
+            <strong>
+              Servicios
+            </strong>
+
+            <i aria-hidden="true">
+              →
+            </i>
+
+          </a>
+
+
+
+          <!-- =============================================
+               ECOEMS MOBILE DESTACADO
+          ============================================== -->
+
+          <a
+            routerLink="/ecoems"
+            class="header__mobile-ecoems"
+            (click)="closeMenu()"
+          >
+
+            <span class="header__mobile-number">
+              04
+            </span>
+
+
+            <div class="header__mobile-link-copy">
+
+              <strong>
+                ECOEMS
+              </strong>
+
+              <small>
+                Ciclo 2026–2027
+              </small>
+
+            </div>
+
+
+            <span class="header__mobile-new">
+              Nuevo
+            </span>
+
+
+            <i aria-hidden="true">
+              ↗
+            </i>
+
+          </a>
+
+
+
+          <a
+            routerLink="/"
+            fragment="programas"
+            (click)="closeMenu()"
+          >
+
+            <span class="header__mobile-number">
+              05
+            </span>
+
+            <strong>
+              Programas
+            </strong>
+
+            <i aria-hidden="true">
+              →
+            </i>
+
+          </a>
+
+
+          <a
+            routerLink="/noticias"
+            (click)="closeMenu()"
+          >
+
+            <span class="header__mobile-number">
+              06
+            </span>
+
+            <strong>
+              Noticias
+            </strong>
+
+            <i aria-hidden="true">
+              →
+            </i>
+
+          </a>
+
+
+          <a
+            routerLink="/"
+            fragment="ubicacion"
+            (click)="closeMenu()"
+          >
+
+            <span class="header__mobile-number">
+              07
+            </span>
+
+            <strong>
+              Ubicación
+            </strong>
+
+            <i aria-hidden="true">
+              →
+            </i>
+
+          </a>
+
+        </nav>
+
+
+
+        <!-- =================================================
+             ECOEMS PROMO MOBILE
+        ================================================== -->
+
+        <a
+          routerLink="/ecoems"
+          class="header__mobile-program"
+          (click)="closeMenu()"
+        >
+
+          <div>
+
+            <span>
+              Próximo ciclo
+            </span>
+
+            <strong>
+              ECOEMS 2026–2027
+            </strong>
+
+            <p>
+              Conoce fechas, horario y programa.
+            </p>
+
+          </div>
+
+          <div class="header__mobile-program-arrow">
+            ↗
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             WHATSAPP
+        ================================================== -->
+
+        <a
+          class="header__mobile-cta"
+          href="https://wa.me/525588357806?text=Hola%20Centro%20Educativo%20AD.%0A%0AMe%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
+          target="_blank"
+          rel="noopener noreferrer"
+          (click)="closeMenu()"
+        >
+
           <span>
-            Huixquilucan
+            Escribir por WhatsApp
+          </span>
+
+          <span aria-hidden="true">
+            ↗
+          </span>
+
+        </a>
+
+
+
+        <!-- FOOTER -->
+        <div class="header__mobile-footer">
+
+          <span>
+            Centro Educativo AD
+          </span>
+
+          <span>
+            Huixquilucan · Edo. Méx.
           </span>
 
         </div>

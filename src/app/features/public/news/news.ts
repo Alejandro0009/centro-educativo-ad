@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 import {
   NEWS,
@@ -7,7 +8,12 @@ import {
 
 @Component({
   selector: 'app-news',
-  imports: [],
+  standalone: true,
+
+  imports: [
+    RouterLink
+  ],
+
   templateUrl: './news.html',
   styleUrl: './news.scss'
 })

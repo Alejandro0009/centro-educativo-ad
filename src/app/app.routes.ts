@@ -11,11 +11,21 @@ export const routes: Routes = [
 
     children: [
 
+      // HOME
       {
         path: '',
         component: Home
       },
 
+      // ECOEMS
+      {
+        path: 'ecoems',
+        loadComponent: () =>
+          import('./features/public/ecoems/ecoems')
+            .then(m => m.Ecoems)
+      },
+
+      // NOTICIAS
       {
         path: 'noticias',
         loadComponent: () =>
@@ -26,6 +36,8 @@ export const routes: Routes = [
     ]
   },
 
+
+  // CUALQUIER RUTA NO EXISTENTE
   {
     path: '**',
     redirectTo: ''
