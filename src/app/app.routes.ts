@@ -43,6 +43,22 @@ export const routes: Routes = [
 
 
       // -------------------------------------------------------
+      // HORARIOS
+      // /empleados/horarios
+      // -------------------------------------------------------
+
+      {
+        path: 'horarios',
+
+        canActivate: [authGuard],
+
+        loadComponent: () =>
+          import('./features/staff/schedule/schedule')
+            .then(m => m.Schedule)
+      },
+
+
+      // -------------------------------------------------------
       // /empleados → /empleados/login
       // -------------------------------------------------------
 

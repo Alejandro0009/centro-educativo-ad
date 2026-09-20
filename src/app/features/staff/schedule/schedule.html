@@ -1,0 +1,1420 @@
+<section
+  class="
+    min-h-screen
+    bg-[#050f1e]
+    text-white
+  "
+>
+
+  <div
+    class="
+      w-full
+      px-3 py-4
+      sm:px-5 sm:py-5
+      lg:px-7 lg:py-6
+      2xl:px-9
+    "
+  >
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header
+      class="
+        mb-5
+        flex
+        flex-col
+        gap-4
+        md:flex-row
+        md:items-center
+        md:justify-between
+      "
+    >
+
+      <div>
+
+        <div
+          class="
+            mb-2
+            flex
+            flex-wrap
+            items-center
+            gap-3
+          "
+        >
+
+          <a
+            routerLink="/empleados/home"
+            class="
+              inline-flex
+              items-center
+              gap-2
+              rounded-lg
+              border
+              border-blue-400/15
+              bg-blue-500/[0.06]
+              px-3
+              py-1.5
+              text-[9px]
+              font-bold
+              uppercase
+              tracking-[0.12em]
+              text-blue-400
+              transition
+              hover:border-blue-400/30
+              hover:bg-blue-500/10
+            "
+          >
+            ← Panel
+          </a>
+
+
+          <span
+            class="
+              text-[9px]
+              font-bold
+              uppercase
+              tracking-[0.18em]
+              text-blue-400
+            "
+          >
+            Centro Educativo AD
+          </span>
+
+        </div>
+
+
+        <h1
+          class="
+            text-[1.9rem]
+            font-bold
+            leading-none
+            tracking-[-0.04em]
+            sm:text-[2.2rem]
+            lg:text-[2.5rem]
+          "
+        >
+          Horario semanal
+        </h1>
+
+
+        <p
+          class="
+            mt-2
+            text-[11px]
+            leading-5
+            text-slate-500
+            sm:text-xs
+          "
+        >
+          Control interno de clases y espacios disponibles.
+        </p>
+
+      </div>
+
+
+
+      <!-- AUTOGUARDADO -->
+
+      <div
+        class="
+          flex
+          w-fit
+          items-center
+          gap-2
+          rounded-lg
+          border
+          border-[#19304d]
+          bg-[#08172a]
+          px-3
+          py-2
+          text-[9px]
+          font-semibold
+          text-slate-400
+        "
+      >
+
+        <span
+          class="
+            h-2
+            w-2
+            rounded-full
+            bg-emerald-400
+            shadow-[0_0_10px_rgba(52,211,153,0.55)]
+          "
+        ></span>
+
+        Autoguardado local
+
+      </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         RESUMEN
+    ====================================================== -->
+
+    <section
+      class="
+        mb-4
+        flex
+        flex-col
+        overflow-hidden
+        rounded-xl
+        border
+        border-[#19304d]
+        bg-[#08172a]
+        sm:flex-row
+        sm:items-stretch
+      "
+    >
+
+
+      <!-- SEMANA -->
+
+      <div
+        class="
+          flex
+          flex-1
+          items-center
+          justify-between
+          border-b
+          border-[#19304d]
+          px-4
+          py-3
+          sm:border-b-0
+          sm:border-r
+        "
+      >
+
+        <span
+          class="
+            text-[8px]
+            font-bold
+            uppercase
+            tracking-[0.13em]
+            text-slate-600
+          "
+        >
+          Semana
+        </span>
+
+
+        <strong
+          class="
+            text-[11px]
+            font-semibold
+            text-slate-200
+          "
+        >
+          Lunes — Sábado
+        </strong>
+
+      </div>
+
+
+
+      <!-- HORARIO -->
+
+      <div
+        class="
+          flex
+          flex-1
+          items-center
+          justify-between
+          border-b
+          border-[#19304d]
+          px-4
+          py-3
+          sm:border-b-0
+          sm:border-r
+        "
+      >
+
+        <span
+          class="
+            text-[8px]
+            font-bold
+            uppercase
+            tracking-[0.13em]
+            text-slate-600
+          "
+        >
+          Horario
+        </span>
+
+
+        <strong
+          class="
+            text-[11px]
+            font-semibold
+            text-slate-200
+          "
+        >
+          08:00 — 20:00
+        </strong>
+
+      </div>
+
+
+
+      <!-- REGISTRADAS -->
+
+      <div
+        class="
+          flex
+          flex-1
+          items-center
+          justify-between
+          px-4
+          py-3
+        "
+      >
+
+        <span
+          class="
+            text-[8px]
+            font-bold
+            uppercase
+            tracking-[0.13em]
+            text-slate-600
+          "
+        >
+          Registradas
+        </span>
+
+
+        <strong
+          class="
+            text-sm
+            font-bold
+            text-blue-400
+          "
+        >
+          {{ classes.length }}
+        </strong>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CABECERA AGENDA
+    ====================================================== -->
+
+    <div
+      class="
+        mb-2.5
+        flex
+        items-end
+        justify-between
+        gap-4
+      "
+    >
+
+      <div>
+
+        <span
+          class="
+            text-[8px]
+            font-bold
+            uppercase
+            tracking-[0.17em]
+            text-blue-400
+          "
+        >
+          Agenda académica
+        </span>
+
+
+        <h2
+          class="
+            mt-0.5
+            text-sm
+            font-semibold
+            text-slate-200
+          "
+        >
+          Disponibilidad semanal
+        </h2>
+
+      </div>
+
+
+
+      <!-- LEYENDA -->
+
+      <div
+        class="
+          hidden
+          items-center
+          gap-4
+          text-[8px]
+          font-semibold
+          text-slate-500
+          sm:flex
+        "
+      >
+
+        <span class="flex items-center gap-1.5">
+
+          <span
+            class="
+              h-1.5
+              w-1.5
+              rounded-full
+              bg-blue-400
+            "
+          ></span>
+
+          Libre
+
+        </span>
+
+
+        <span class="flex items-center gap-1.5">
+
+          <span
+            class="
+              h-1.5
+              w-1.5
+              rounded-full
+              bg-red-500
+            "
+          ></span>
+
+          Reservado
+
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TABLA
+    ====================================================== -->
+
+    <section
+      class="
+        w-full
+        overflow-hidden
+        rounded-xl
+        border
+        border-[#19304d]
+        bg-[#071525]
+        shadow-[0_18px_50px_rgba(0,0,0,0.22)]
+      "
+    >
+
+      <div
+        class="
+          w-full
+          overflow-x-auto
+          overscroll-x-contain
+        "
+      >
+
+        <table
+          class="
+            w-full
+            min-w-[780px]
+            table-fixed
+            border-separate
+            border-spacing-0
+            lg:min-w-0
+          "
+        >
+
+
+          <!-- =================================================
+               DÍAS
+          ================================================== -->
+
+          <thead>
+
+            <tr>
+
+
+              <!-- HORA -->
+
+              <th
+                class="
+                  sticky
+                  left-0
+                  z-30
+                  w-[86px]
+                  min-w-[86px]
+                  border-b
+                  border-r
+                  border-[#19304d]
+                  bg-[#09192c]
+                  px-2
+                  py-3
+                  text-center
+                  text-[8px]
+                  font-bold
+                  uppercase
+                  tracking-[0.14em]
+                  text-blue-400
+                  sm:w-[94px]
+                  sm:min-w-[94px]
+                "
+              >
+                Hora
+              </th>
+
+
+
+              <!-- DÍAS -->
+
+              @for (day of days; track day) {
+
+                <th
+                  class="
+                    border-b
+                    border-r
+                    border-[#19304d]
+                    bg-[#09192c]
+                    px-1.5
+                    py-3
+                    text-center
+                    text-[9px]
+                    font-bold
+                    uppercase
+                    tracking-[0.07em]
+                    text-slate-300
+                    last:border-r-0
+                    lg:text-[10px]
+                  "
+                >
+                  {{ day }}
+                </th>
+
+              }
+
+            </tr>
+
+          </thead>
+
+
+
+          <!-- =================================================
+               HORARIOS
+          ================================================== -->
+
+          <tbody>
+
+            @for (hour of hours; track hour) {
+
+              <tr class="group/row">
+
+
+                <!-- HORA -->
+
+                <th
+                  class="
+                    sticky
+                    left-0
+                    z-20
+                    w-[86px]
+                    min-w-[86px]
+                    border-b
+                    border-r
+                    border-[#142943]
+                    bg-[#08172a]
+                    px-2
+                    text-center
+                    text-[12px]
+                    font-bold
+                    text-slate-200
+                    sm:w-[94px]
+                    sm:min-w-[94px]
+                    sm:text-[13px]
+                    lg:text-[14px]
+                  "
+                >
+                  {{ hour }}
+                </th>
+
+
+
+                <!-- DÍAS -->
+
+                @for (day of days; track day) {
+
+                  <td
+                    class="
+                      h-[56px]
+                      border-b
+                      border-r
+                      border-[#142943]
+                      bg-[#071525]
+                      p-[3px]
+                      last:border-r-0
+                      group-hover/row:bg-[#08192c]
+                      sm:h-[58px]
+                      xl:h-[60px]
+                    "
+                  >
+
+
+                    <!-- =========================================
+                         RESERVADO
+                    ========================================== -->
+
+                    @if (getClass(day, hour); as classItem) {
+
+                      <button
+                        type="button"
+                        (click)="openExistingReservation(classItem)"
+                        class="
+                          group
+                          flex
+                          h-full
+                          w-full
+                          min-w-0
+                          flex-col
+                          justify-center
+                          overflow-hidden
+                          rounded-md
+                          border
+                          border-red-500/20
+                          bg-red-500/[0.08]
+                          px-2
+                          py-1.5
+                          text-left
+                          transition
+                          hover:border-red-400/40
+                          hover:bg-red-500/[0.12]
+                        "
+                      >
+
+
+                        <!-- NOMBRE -->
+
+                        <div
+                          class="
+                            flex
+                            min-w-0
+                            items-center
+                            gap-1.5
+                          "
+                        >
+
+                          <span
+                            class="
+                              h-1.5
+                              w-1.5
+                              shrink-0
+                              rounded-full
+                              bg-red-500
+                            "
+                          ></span>
+
+
+                          <strong
+                            class="
+                              block
+                              min-w-0
+                              flex-1
+                              truncate
+                              text-[9px]
+                              font-bold
+                              text-slate-100
+                              sm:text-[10px]
+                              xl:text-[11px]
+                            "
+                          >
+                            {{ classItem.studentName }}
+                          </strong>
+
+                        </div>
+
+
+
+                        <!-- MATERIA + MODALIDAD -->
+
+                        <div
+                          class="
+                            mt-1
+                            flex
+                            min-w-0
+                            items-center
+                            justify-between
+                            gap-1.5
+                            pl-3
+                          "
+                        >
+
+                          <span
+                            class="
+                              min-w-0
+                              flex-1
+                              truncate
+                              text-[7px]
+                              font-medium
+                              text-slate-400
+                              sm:text-[8px]
+                            "
+                          >
+                            {{ classItem.subject }}
+                          </span>
+
+
+                          <span
+                            class="
+                              shrink-0
+                              rounded
+                              bg-red-500/10
+                              px-1.5
+                              py-0.5
+                              text-[6px]
+                              font-bold
+                              text-red-300
+                              sm:text-[7px]
+                            "
+                          >
+                            {{ classItem.modality }}
+                          </span>
+
+                        </div>
+
+                      </button>
+
+                    }
+
+
+
+                    <!-- =========================================
+                         LIBRE
+                    ========================================== -->
+
+                    @else {
+
+                      <button
+                        type="button"
+                        (click)="openReservation(day, hour)"
+                        class="
+                          group
+                          flex
+                          h-full
+                          w-full
+                          items-center
+                          justify-center
+                          gap-1.5
+                          rounded-md
+                          border
+                          border-transparent
+                          bg-transparent
+                          text-slate-700
+                          transition
+                          hover:border-blue-400/20
+                          hover:bg-blue-500/[0.08]
+                          hover:text-blue-400
+                          focus:outline-none
+                          focus:ring-1
+                          focus:ring-blue-500/30
+                        "
+                      >
+
+                        <span
+                          class="
+                            flex
+                            h-5
+                            w-5
+                            items-center
+                            justify-center
+                            rounded
+                            border
+                            border-[#1b3554]
+                            bg-[#0a1b30]
+                            text-[13px]
+                            font-light
+                            transition
+                            group-hover:border-blue-400/30
+                            group-hover:bg-blue-500/10
+                          "
+                        >
+                          +
+                        </span>
+
+
+                        <span
+                          class="
+                            hidden
+                            text-[7px]
+                            font-semibold
+                            sm:inline
+                            lg:text-[8px]
+                          "
+                        >
+                          Libre
+                        </span>
+
+                      </button>
+
+                    }
+
+                  </td>
+
+                }
+
+              </tr>
+
+            }
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+
+
+      <!-- =================================================
+           FOOTER
+      ================================================== -->
+
+      <footer
+        class="
+          flex
+          items-center
+          justify-between
+          border-t
+          border-[#19304d]
+          bg-[#08172a]
+          px-4
+          py-2.5
+        "
+      >
+
+        <span
+          class="
+            text-[7px]
+            font-bold
+            uppercase
+            tracking-[0.12em]
+            text-slate-600
+          "
+        >
+          Centro Educativo AD
+        </span>
+
+
+        <span
+          class="
+            text-[8px]
+            font-semibold
+            text-slate-500
+          "
+        >
+          {{ classes.length }} clases
+        </span>
+
+      </footer>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MODAL
+    ====================================================== -->
+
+    @if (modalOpen) {
+
+      <div
+        class="
+          fixed
+          inset-0
+          z-[100]
+          flex
+          items-center
+          justify-center
+          overflow-y-auto
+          bg-black/80
+          px-4
+          py-6
+          backdrop-blur-sm
+        "
+        (click)="closeModal()"
+      >
+
+        <div
+          class="
+            my-auto
+            w-full
+            max-w-[430px]
+            overflow-hidden
+            rounded-2xl
+            border
+            border-[#1c3554]
+            bg-[#08172a]
+            shadow-[0_30px_100px_rgba(0,0,0,0.60)]
+          "
+          (click)="$event.stopPropagation()"
+        >
+
+
+
+          <!-- =================================================
+               MODAL HEADER
+          ================================================== -->
+
+          <header
+            class="
+              border-b
+              border-[#19304d]
+              px-5
+              py-4
+            "
+          >
+
+            <div
+              class="
+                flex
+                items-start
+                justify-between
+                gap-4
+              "
+            >
+
+              <div>
+
+                <span
+                  class="
+                    text-[8px]
+                    font-bold
+                    uppercase
+                    tracking-[0.17em]
+                    text-blue-400
+                  "
+                >
+
+                  @if (editingReservation) {
+                    Reservación existente
+                  } @else {
+                    Nueva clase
+                  }
+
+                </span>
+
+
+                <h2
+                  class="
+                    mt-1
+                    text-xl
+                    font-bold
+                    tracking-[-0.03em]
+                    text-white
+                  "
+                >
+
+                  @if (editingReservation) {
+                    Editar horario
+                  } @else {
+                    Registrar horario
+                  }
+
+                </h2>
+
+              </div>
+
+
+
+              <!-- CERRAR -->
+
+              <button
+                type="button"
+                (click)="closeModal()"
+                class="
+                  flex
+                  h-8
+                  w-8
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-lg
+                  border
+                  border-[#1b3554]
+                  text-xs
+                  text-slate-500
+                  transition
+                  hover:border-slate-500
+                  hover:text-white
+                "
+              >
+                ✕
+              </button>
+
+            </div>
+
+
+
+            <!-- DÍA Y HORA -->
+
+            <div
+              class="
+                mt-3
+                flex
+                items-center
+                gap-2
+              "
+            >
+
+              <span
+                class="
+                  rounded-md
+                  bg-blue-500/10
+                  px-2
+                  py-1
+                  text-[9px]
+                  font-bold
+                  text-blue-400
+                "
+              >
+                {{ selectedDay }}
+              </span>
+
+
+              <span
+                class="
+                  rounded-md
+                  bg-blue-500/10
+                  px-2
+                  py-1
+                  text-[9px]
+                  font-bold
+                  text-blue-400
+                "
+              >
+                {{ selectedHour }}
+              </span>
+
+            </div>
+
+          </header>
+
+
+
+          <!-- =================================================
+               FORMULARIO
+          ================================================== -->
+
+          <form
+            class="
+              space-y-4
+              px-5
+              py-5
+            "
+            (ngSubmit)="saveReservation()"
+          >
+
+
+
+            <!-- ===============================================
+                 TIPO
+            ================================================ -->
+
+            <div>
+
+              <label
+                class="
+                  mb-2
+                  block
+                  text-[8px]
+                  font-bold
+                  uppercase
+                  tracking-[0.12em]
+                  text-slate-500
+                "
+              >
+                Tipo de reservación
+              </label>
+
+
+              <div
+                class="
+                  grid
+                  grid-cols-2
+                  gap-1
+                  rounded-xl
+                  border
+                  border-[#1b3554]
+                  bg-[#06111e]
+                  p-1
+                "
+              >
+
+
+                <!-- ESTUDIANTE -->
+
+                <button
+                  type="button"
+                  (click)="reservationType = 'Estudiante'"
+                  [class.bg-blue-600]="
+                    reservationType === 'Estudiante'
+                  "
+                  [class.text-white]="
+                    reservationType === 'Estudiante'
+                  "
+                  [class.text-slate-500]="
+                    reservationType !== 'Estudiante'
+                  "
+                  class="
+                    rounded-lg
+                    px-3
+                    py-2.5
+                    text-[10px]
+                    font-bold
+                    transition
+                  "
+                >
+                  Estudiante
+                </button>
+
+
+
+                <!-- GRUPO -->
+
+                <button
+                  type="button"
+                  (click)="reservationType = 'Grupo'"
+                  [class.bg-blue-600]="
+                    reservationType === 'Grupo'
+                  "
+                  [class.text-white]="
+                    reservationType === 'Grupo'
+                  "
+                  [class.text-slate-500]="
+                    reservationType !== 'Grupo'
+                  "
+                  class="
+                    rounded-lg
+                    px-3
+                    py-2.5
+                    text-[10px]
+                    font-bold
+                    transition
+                  "
+                >
+                  Grupo
+                </button>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- ===============================================
+                 ESTUDIANTE / GRUPO
+            ================================================ -->
+
+            <div>
+
+              <label
+                for="studentName"
+                class="
+                  mb-1.5
+                  block
+                  text-[8px]
+                  font-bold
+                  uppercase
+                  tracking-[0.12em]
+                  text-slate-500
+                "
+              >
+
+                @if (reservationType === 'Grupo') {
+                  Nombre del grupo
+                } @else {
+                  Nombre del estudiante
+                }
+
+              </label>
+
+
+              <input
+                id="studentName"
+                name="studentName"
+                type="text"
+                [(ngModel)]="studentName"
+                required
+                autocomplete="off"
+
+                [placeholder]="
+                  reservationType === 'Grupo'
+                    ? 'Ej. Inglés A1'
+                    : 'Nombre del estudiante'
+                "
+
+                class="
+                  w-full
+                  rounded-lg
+                  border
+                  border-[#1b3554]
+                  bg-[#06111e]
+                  px-3.5
+                  py-2.5
+                  text-sm
+                  text-white
+                  outline-none
+                  transition
+                  placeholder:text-slate-700
+                  focus:border-blue-500
+                  focus:ring-2
+                  focus:ring-blue-500/10
+                "
+              />
+
+            </div>
+
+
+
+            <!-- ===============================================
+                 MATERIA
+            ================================================ -->
+
+            <div>
+
+              <label
+                for="subject"
+                class="
+                  mb-1.5
+                  block
+                  text-[8px]
+                  font-bold
+                  uppercase
+                  tracking-[0.12em]
+                  text-slate-500
+                "
+              >
+                Materia
+              </label>
+
+
+              <input
+                id="subject"
+                name="subject"
+                type="text"
+                [(ngModel)]="subject"
+                required
+                autocomplete="off"
+                placeholder="Ej. Matemáticas"
+
+                class="
+                  w-full
+                  rounded-lg
+                  border
+                  border-[#1b3554]
+                  bg-[#06111e]
+                  px-3.5
+                  py-2.5
+                  text-sm
+                  text-white
+                  outline-none
+                  transition
+                  placeholder:text-slate-700
+                  focus:border-blue-500
+                  focus:ring-2
+                  focus:ring-blue-500/10
+                "
+              />
+
+            </div>
+
+
+
+            <!-- ===============================================
+                 MODALIDAD
+            ================================================ -->
+
+            <div>
+
+              <label
+                for="modality"
+                class="
+                  mb-1.5
+                  block
+                  text-[8px]
+                  font-bold
+                  uppercase
+                  tracking-[0.12em]
+                  text-slate-500
+                "
+              >
+                Modalidad
+              </label>
+
+
+              <select
+                id="modality"
+                name="modality"
+                [(ngModel)]="modality"
+
+                class="
+                  w-full
+                  rounded-lg
+                  border
+                  border-[#1b3554]
+                  bg-[#06111e]
+                  px-3.5
+                  py-2.5
+                  text-sm
+                  text-white
+                  outline-none
+                  transition
+                  focus:border-blue-500
+                  focus:ring-2
+                  focus:ring-blue-500/10
+                "
+              >
+
+                <option value="Presencial">
+                  Presencial
+                </option>
+
+                <option value="En línea">
+                  En línea
+                </option>
+
+              </select>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ACCIONES
+            ================================================== -->
+
+            <div
+              class="
+                border-t
+                border-[#19304d]
+                pt-4
+              "
+            >
+
+
+              <!-- LIBERAR -->
+
+              @if (editingReservation) {
+
+                <button
+                  type="button"
+                  (click)="deleteReservation()"
+
+                  class="
+                    mb-3
+                    w-full
+                    rounded-lg
+                    border
+                    border-red-500/25
+                    bg-red-500/[0.07]
+                    px-4
+                    py-2.5
+                    text-[10px]
+                    font-bold
+                    text-red-400
+                    transition
+                    hover:border-red-400/50
+                    hover:bg-red-500/[0.12]
+                  "
+                >
+                  Liberar espacio
+                </button>
+
+              }
+
+
+
+              <div
+                class="
+                  flex
+                  flex-col-reverse
+                  gap-2
+                  sm:flex-row
+                  sm:justify-end
+                "
+              >
+
+
+                <!-- CANCELAR -->
+
+                <button
+                  type="button"
+                  (click)="closeModal()"
+
+                  class="
+                    rounded-lg
+                    border
+                    border-[#1b3554]
+                    px-4
+                    py-2.5
+                    text-[10px]
+                    font-semibold
+                    text-slate-400
+                    transition
+                    hover:border-slate-500
+                    hover:text-white
+                  "
+                >
+                  Cancelar
+                </button>
+
+
+
+                <!-- GUARDAR -->
+
+                <button
+                  type="submit"
+
+                  class="
+                    rounded-lg
+                    bg-blue-600
+                    px-5
+                    py-2.5
+                    text-[10px]
+                    font-bold
+                    text-white
+                    shadow-[0_8px_24px_rgba(37,99,235,0.22)]
+                    transition
+                    hover:bg-blue-500
+                    active:scale-[0.98]
+                  "
+                >
+
+                  @if (editingReservation) {
+                    Guardar cambios
+                  } @else {
+                    Registrar clase
+                  }
+
+                </button>
+
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    }
+
+  </div>
+
+</section>
