@@ -1,296 +1,205 @@
 <!-- ============================================================================
      NOTICIAS · CENTRO EDUCATIVO AD
-     ACTUALIDAD / ACTIVIDADES / PROGRAMAS
+     DISEÑO EDITORIAL · MÁXIMO 3 PUBLICACIONES
 ============================================================================ -->
 
-<main
-  class="overflow-hidden bg-[#080808] text-white"
->
+<main class="overflow-hidden bg-[#080808] text-white">
 
 
   <!-- =========================================================================
-       01 · HERO
+     01 · HERO
+============================================================================ -->
+
+<section
+  class="relative isolate overflow-hidden px-5 pb-14 pt-28 sm:px-8 sm:pb-16 sm:pt-32 lg:px-12 lg:pb-20 lg:pt-36"
+>
+
+  <!-- =========================================================================
+       AMBIENTE
   ========================================================================== -->
 
-  <section
-    class="relative isolate overflow-hidden px-5 pb-20 pt-32 sm:px-8 lg:px-12 lg:pb-28 lg:pt-40"
+  <div
+    class="pointer-events-none absolute -left-40 top-0 h-[420px] w-[420px] rounded-full bg-[#d4af37]/[0.06] blur-[150px]"
+  ></div>
+
+  <div
+    class="pointer-events-none absolute -right-40 bottom-[-150px] h-[420px] w-[420px] rounded-full bg-white/[0.02] blur-[150px]"
+  ></div>
+
+
+  <!-- WATERMARK -->
+
+  <span
+    class="pointer-events-none absolute -right-4 top-20 hidden select-none text-[170px] font-semibold leading-none tracking-[-0.08em] text-white/[0.018] xl:block"
+    aria-hidden="true"
   >
+    AD
+  </span>
+
+
+
+  <!-- =========================================================================
+       CONTENIDO
+  ========================================================================== -->
+
+  <div class="relative mx-auto max-w-7xl">
+
 
     <!-- =========================================================
-         AMBIENTE
+         TOP LINE
     ========================================================== -->
 
     <div
-      class="pointer-events-none absolute -left-48 top-0 h-[540px] w-[540px] rounded-full bg-[#d4af37]/[0.07] blur-[180px]"
-    ></div>
-
-    <div
-      class="pointer-events-none absolute -right-48 bottom-0 h-[520px] w-[520px] rounded-full bg-white/[0.025] blur-[180px]"
-    ></div>
-
-
-    <!-- watermark -->
-    <span
-      class="pointer-events-none absolute -right-8 top-24 hidden text-[260px] font-semibold leading-none tracking-[-0.1em] text-white/[0.018] xl:block"
-      aria-hidden="true"
-    >
-      AD
-    </span>
-
-
-
-    <div
-      class="relative mx-auto max-w-7xl"
+      class="reveal flex flex-wrap items-center justify-between gap-4 border-b border-white/[0.08] pb-5"
     >
 
-      <!-- =======================================================
-           TOP LINE
-      ======================================================== -->
+      <div class="flex items-center gap-3">
 
-      <div
-        class="reveal flex flex-wrap items-center justify-between gap-5 border-b border-white/[0.08] pb-6"
-      >
-
-        <div
-          class="flex items-center gap-3"
-        >
-
-          <span
-            class="h-px w-9 bg-[#d4af37]"
-          ></span>
-
-          <span
-            class="text-[9px] font-semibold uppercase tracking-[0.3em] text-[#d4af37]"
-          >
-            Actualidad / Centro Educativo AD
-          </span>
-
-        </div>
-
+        <span class="h-px w-8 bg-[#d4af37]"></span>
 
         <span
-          class="text-[8px] font-medium uppercase tracking-[0.25em] text-white/20"
+          class="text-[9px] font-semibold uppercase tracking-[0.28em] text-[#d4af37]"
         >
-          Noticias · Actividades · Avisos
+          Actualidad · Centro Educativo AD
         </span>
 
       </div>
 
 
+      <span
+        class="hidden text-[8px] font-medium uppercase tracking-[0.22em] text-white/20 sm:block"
+      >
+        Noticias · Actividades · Comunidad
+      </span>
 
-      <!-- =======================================================
-           HERO GRID
-      ======================================================== -->
+    </div>
+
+
+
+    <!-- =========================================================================
+         HERO CONTENT
+    ========================================================================== -->
+
+    <div
+      class="mt-12 grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-end lg:gap-16"
+    >
+
+
+      <!-- =========================================================
+           TÍTULO
+      ========================================================== -->
+
+      <div class="reveal">
+
+        <span
+          class="text-[9px] font-semibold uppercase tracking-[0.25em] text-white/30"
+        >
+          Lo más reciente
+        </span>
+
+
+        <h1
+          class="mt-4 text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-6xl lg:text-7xl"
+        >
+          Noticias
+
+          <span
+            class="text-[#d4af37]"
+          >
+            AD.
+          </span>
+        </h1>
+
+      </div>
+
+
+
+      <!-- =========================================================
+           DESCRIPCIÓN
+      ========================================================== -->
 
       <div
-        class="mt-14 grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-end"
+        class="reveal reveal--right lg:border-l lg:border-white/10 lg:pl-8"
       >
 
-
-        <!-- =====================================================
-             COPY
-        ====================================================== -->
-
-        <div
-          class="reveal"
+        <p
+          class="max-w-md text-sm leading-7 text-white/45"
         >
+          Actividades, logros, programas y momentos importantes
+          que forman parte de nuestra comunidad educativa.
+        </p>
+
+
+        <div class="mt-5 flex items-center gap-3">
 
           <span
-            class="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/30"
+            class="h-1.5 w-1.5 rounded-full bg-[#d4af37]"
+          ></span>
+
+          <span
+            class="text-[8px] font-semibold uppercase tracking-[0.2em] text-white/25"
           >
-            Lo que está pasando en AD
+            Actualidad del centro
           </span>
-
-
-          <h1
-            class="mt-5 max-w-5xl text-[clamp(4.5rem,10vw,9rem)] font-semibold leading-[0.82] tracking-[-0.07em]"
-          >
-
-            <span class="block text-white">
-              Noticias.
-            </span>
-
-            <span
-              class="block text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.28)]"
-            >
-              Actividades.
-            </span>
-
-            <span
-              class="block bg-gradient-to-r from-[#d4af37] via-[#efd276] to-[#a98220] bg-clip-text text-transparent"
-            >
-              AD.
-            </span>
-
-          </h1>
-
-
-          <p
-            class="mt-8 max-w-2xl text-sm leading-7 text-white/50 sm:text-base sm:leading-8"
-          >
-            Un espacio para compartir novedades, actividades,
-            próximos programas, avisos y momentos importantes
-            de Centro Educativo AD.
-          </p>
 
         </div>
-
-
-
-        <!-- =====================================================
-             ISSUE CARD
-        ====================================================== -->
-
-        <aside
-          class="reveal reveal--right relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#0d0d0d] p-7 sm:p-8"
-        >
-
-          <div
-            class="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-[#d4af37]/10 blur-[90px]"
-          ></div>
-
-
-          <span
-            class="relative text-[9px] font-semibold uppercase tracking-[0.25em] text-[#d4af37]"
-          >
-            Edición actual
-          </span>
-
-
-          <div
-            class="relative mt-8 flex items-end justify-between gap-5"
-          >
-
-            <div>
-
-              <strong
-                class="block text-5xl font-semibold tracking-[-0.06em]"
-              >
-                09
-              </strong>
-
-              <span
-                class="mt-1 block text-[9px] uppercase tracking-[0.2em] text-white/30"
-              >
-                Septiembre
-              </span>
-
-            </div>
-
-
-            <strong
-              class="text-2xl font-semibold text-white/20"
-            >
-              2026
-            </strong>
-
-          </div>
-
-
-          <div
-            class="relative mt-8 border-t border-white/10 pt-6"
-          >
-
-            <p
-              class="text-sm leading-6 text-white/45"
-            >
-              Consulta las publicaciones más recientes
-              y conoce los próximos movimientos del centro.
-            </p>
-
-          </div>
-
-
-          <div
-            class="relative mt-6 flex items-center gap-3"
-          >
-
-            <span
-              class="relative flex h-2 w-2"
-            >
-
-              <span
-                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#d4af37] opacity-25"
-              ></span>
-
-              <span
-                class="relative inline-flex h-2 w-2 rounded-full bg-[#d4af37]"
-              ></span>
-
-            </span>
-
-
-            <span
-              class="text-[8px] font-semibold uppercase tracking-[0.2em] text-white/30"
-            >
-              Archivo activo
-            </span>
-
-          </div>
-
-        </aside>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
 
-
+</section>
 
   <!-- =========================================================================
-       02 · CONTENIDO
+       02 · PUBLICACIONES
   ========================================================================== -->
 
   <section
     class="relative bg-[#e9e6df] px-5 py-20 text-[#111] sm:px-8 lg:px-12 lg:py-28"
   >
 
-    <!-- ambient -->
+    <!-- AMBIENTE -->
+
     <div
-      class="pointer-events-none absolute -right-48 top-20 h-[480px] w-[480px] rounded-full bg-[#d4af37]/10 blur-[170px]"
+      class="pointer-events-none absolute -right-52 top-20 h-[500px] w-[500px] rounded-full bg-[#d4af37]/10 blur-[180px]"
     ></div>
 
 
-    <div
-      class="relative mx-auto max-w-7xl"
-    >
+    <div class="relative mx-auto max-w-7xl">
 
 
       <!-- =========================================================
-           INTRO
+           HEADER DE PUBLICACIONES
       ========================================================== -->
 
       <div
-        class="reveal grid gap-9 lg:grid-cols-[0.8fr_1.2fr] lg:items-end"
+        class="reveal flex flex-col gap-8 border-b border-black/10 pb-9 sm:flex-row sm:items-end sm:justify-between"
       >
 
         <div>
 
-          <div
-            class="flex items-center gap-3"
-          >
+          <div class="flex items-center gap-3">
+
+            <span class="h-px w-9 bg-[#96751d]"></span>
 
             <span
-              class="h-px w-9 bg-[#92721d]"
-            ></span>
-
-            <span
-              class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#826418]"
+              class="text-[9px] font-semibold uppercase tracking-[0.3em] text-[#806318]"
             >
-              01 / ARCHIVO DE NOVEDADES
+              01 / ACTUALIDAD
             </span>
 
           </div>
 
 
           <h2
-            class="mt-6 max-w-xl text-4xl font-semibold leading-[1.03] tracking-[-0.045em] sm:text-5xl"
+            class="mt-5 text-4xl font-semibold leading-[1] tracking-[-0.045em] sm:text-5xl"
           >
-            Todo lo nuevo
+            Lo último
 
-            <span class="block text-black/35">
-              en un mismo lugar.
+            <span class="text-black/30">
+              en AD.
             </span>
           </h2>
 
@@ -298,296 +207,154 @@
 
 
         <p
-          class="max-w-xl text-sm leading-7 text-black/45 lg:justify-self-end"
+          class="max-w-md text-sm leading-6 text-black/40"
         >
-          Conforme publiquemos nuevas actividades,
-          programas e información importante,
-          podrás encontrarlos aquí de forma cronológica.
+          Una selección de las publicaciones más recientes
+          de Centro Educativo AD.
         </p>
 
       </div>
 
 
 
-      <!-- =========================================================
-           FILTROS
-      ========================================================== -->
-
-      <div
-        class="reveal mt-12 flex flex-wrap gap-2 border-y border-black/10 py-5"
-      >
-
-        <button
-          type="button"
-          class="rounded-full bg-[#111] px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-[#222]"
-        >
-          Todas
-        </button>
-
-
-        <button
-          type="button"
-          class="rounded-full border border-black/10 px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.18em] text-black/45 transition hover:border-black/25 hover:bg-black/[0.03] hover:text-black"
-        >
-          Centro AD
-        </button>
-
-
-        <button
-          type="button"
-          class="rounded-full border border-[#92721d]/20 bg-[#d4af37]/[0.05] px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.18em] text-[#806318] transition hover:border-[#92721d]/40 hover:bg-[#d4af37]/10"
-        >
-          ECOEMS
-        </button>
-
-
-        <button
-          type="button"
-          class="rounded-full border border-black/10 px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.18em] text-black/45 transition hover:border-black/25 hover:bg-black/[0.03] hover:text-black"
-        >
-          Universidad
-        </button>
-
-
-        <button
-          type="button"
-          class="rounded-full border border-black/10 px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.18em] text-black/45 transition hover:border-black/25 hover:bg-black/[0.03] hover:text-black"
-        >
-          Inglés AD
-        </button>
-
-      </div>
-
-
-
       <!-- =========================================================================
-           03 · SEPTIEMBRE
+           LISTADO DE NOTICIAS
       ========================================================================== -->
 
-      <section
-        class="mt-16"
-      >
+      <div class="mt-4">
 
-        <!-- =====================================================
-             MONTH HEADER
-        ====================================================== -->
-
-        <div
-          class="reveal flex flex-wrap items-end justify-between gap-6 border-b border-black/10 pb-7"
-        >
-
-          <div>
-
-            <span
-              class="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#8b6c19]"
-            >
-              2026 / 09
-            </span>
+        @for (article of news; track article.id) {
 
 
-            <h2
-              class="mt-2 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl"
-            >
-              Septiembre
+          <!-- =====================================================================
+               NOTICIA
+          ====================================================================== -->
 
-              <span class="text-black/25">
-                2026
-              </span>
-            </h2>
-
-          </div>
-
-
-          <span
-            class="inline-flex items-center gap-2 rounded-full border border-[#92721d]/20 bg-[#d4af37]/[0.06] px-4 py-2 text-[8px] font-semibold uppercase tracking-[0.2em] text-[#806318]"
+          <article
+            class="group reveal border-b border-black/10 py-14 sm:py-16 lg:py-20"
           >
 
-            <span
-              class="h-1.5 w-1.5 rounded-full bg-[#9e7c21]"
-            ></span>
-
-            Actualidad
-
-          </span>
-
-        </div>
+            <div
+              class="grid gap-9 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-16"
+              [class.lg:grid-cols-[1.08fr_0.92fr]]="$index % 2 !== 0"
+            >
 
 
+              <!-- ===============================================================
+                   IMAGEN
+              ================================================================ -->
 
-        <!-- =====================================================
-             NEWS GRID
-        ====================================================== -->
-
-        <div
-          class="mt-8 grid gap-5 lg:grid-cols-12"
-        >
-
-          @for (article of news; track article.id) {
-
-
-            <!-- =================================================
-                 PRIMERA NOTICIA · FEATURED
-            ================================================== -->
-
-            @if ($first) {
-
-              <article
-                class="group reveal relative overflow-hidden rounded-[2rem] border border-black/10 bg-[#111] p-7 text-white transition duration-500 hover:-translate-y-1 lg:col-span-7 lg:min-h-[470px] sm:p-9"
+              <div
+                class="relative"
+                [class.lg:order-2]="$index % 2 !== 0"
               >
 
-                <!-- glow -->
-                <div
-                  class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#d4af37]/10 blur-[100px]"
-                ></div>
 
+                <!-- NÚMERO -->
 
-                <!-- watermark -->
                 <span
-                  class="pointer-events-none absolute -bottom-8 -right-4 text-[160px] font-semibold leading-none tracking-[-0.08em] text-white/[0.025]"
-                  aria-hidden="true"
+                  class="absolute -top-5 left-4 z-20 flex h-11 min-w-11 items-center justify-center rounded-full border border-white/10 bg-[#111] px-3 text-[9px] font-semibold tracking-[0.18em] text-[#d4af37] shadow-xl sm:left-6"
                 >
-                  01
+                  0{{ $index + 1 }}
                 </span>
 
 
-                <div
-                  class="relative flex h-full flex-col"
-                >
 
-                  <!-- top -->
-                  <div
-                    class="flex items-start justify-between gap-5"
-                  >
+                <!-- SI EXISTE IMAGEN -->
 
-                    <span
-                      class="inline-flex items-center gap-2 rounded-full border border-[#d4af37]/20 bg-[#d4af37]/[0.06] px-4 py-2 text-[8px] font-semibold uppercase tracking-[0.2em] text-[#d4af37]"
-                    >
-                      {{ article.category }}
-                    </span>
-
-
-                    <span
-                      class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white/30 transition duration-500 group-hover:rotate-45 group-hover:border-[#d4af37]/40 group-hover:text-[#d4af37]"
-                      aria-hidden="true"
-                    >
-                      ↗
-                    </span>
-
-                  </div>
-
-
+                @if (article.image) {
 
                   <div
-                    class="mt-auto pt-20"
+                    class="relative aspect-[16/10] overflow-hidden rounded-[1.8rem] bg-[#111] shadow-[0_25px_70px_rgba(0,0,0,0.12)]"
                   >
 
-                    <span
-                      class="text-[9px] font-semibold uppercase tracking-[0.2em] text-white/25"
-                    >
-                      Noticia destacada
-                    </span>
-
-
-                    <h3
-                      class="mt-4 max-w-2xl text-3xl font-semibold leading-tight tracking-[-0.035em] sm:text-4xl"
-                    >
-                      {{ article.title }}
-                    </h3>
-
-
-                    <p
-                      class="mt-5 max-w-xl text-sm leading-7 text-white/45"
-                    >
-                      {{ article.excerpt }}
-                    </p>
+                    <img
+                      [src]="article.image"
+                      [alt]="article.title"
+                      loading="lazy"
+                      decoding="async"
+                      class="h-full w-full object-cover transition duration-1000 ease-out group-hover:scale-[1.025]"
+                    />
 
 
                     <div
-                      class="mt-8 flex items-center gap-4"
+                      class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent"
+                    ></div>
+
+
+                    <div
+                      class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10"
+                    ></div>
+
+                  </div>
+
+                }
+
+
+                <!-- SI NO EXISTE IMAGEN -->
+
+                @else {
+
+                  <div
+                    class="relative flex aspect-[16/10] items-center justify-center overflow-hidden rounded-[1.8rem] bg-[#111]"
+                  >
+
+                    <div
+                      class="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#d4af37]/10 blur-[90px]"
+                    ></div>
+
+
+                    <span
+                      class="select-none text-[110px] font-semibold tracking-[-0.08em] text-white/[0.035] sm:text-[150px]"
+                      aria-hidden="true"
+                    >
+                      AD
+                    </span>
+
+
+                    <div
+                      class="absolute bottom-6 left-6 flex items-center gap-3"
                     >
 
-                      <span
-                        class="h-px w-10 bg-[#d4af37]/60"
-                      ></span>
+                      <span class="h-px w-8 bg-[#d4af37]"></span>
 
                       <span
-                        class="text-[9px] font-semibold uppercase tracking-[0.18em] text-white/30"
+                        class="text-[8px] font-semibold uppercase tracking-[0.22em] text-[#d4af37]"
                       >
-                        {{ article.date }}
+                        Centro Educativo AD
                       </span>
 
                     </div>
 
                   </div>
 
-                </div>
+                }
 
-              </article>
-
-            }
+              </div>
 
 
-            <!-- =================================================
-                 RESTO DE NOTICIAS
-            ================================================== -->
 
-            @else {
+              <!-- ===============================================================
+                   INFORMACIÓN
+              ================================================================ -->
 
-              <article
-                class="group reveal relative min-h-[300px] overflow-hidden rounded-[1.8rem] border border-black/10 bg-[#efede7] p-6 transition duration-500 hover:-translate-y-1 hover:border-[#96751d]/30 hover:bg-[#f3f1eb] lg:col-span-5"
+              <div
+                [class.lg:order-1]="$index % 2 !== 0"
               >
 
+
+                <!-- META -->
+
                 <div
-                  class="flex items-start justify-between gap-5"
+                  class="flex flex-wrap items-center gap-3"
                 >
 
                   <span
-                    class="text-[10px] font-semibold text-[#8b6c1b]"
-                  >
-                    0{{ $index + 1 }}
-                  </span>
-
-
-                  <span
-                    class="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 text-black/25 transition duration-300 group-hover:rotate-45 group-hover:border-[#96751d]/30 group-hover:text-[#8b6c1b]"
-                    aria-hidden="true"
-                  >
-                    ↗
-                  </span>
-
-                </div>
-
-
-                <div
-                  class="mt-12"
-                >
-
-                  <span
-                    class="text-[8px] font-semibold uppercase tracking-[0.2em] text-[#8b6c1b]"
+                    class="inline-flex rounded-full border border-[#96751d]/20 bg-[#d4af37]/[0.06] px-4 py-2 text-[8px] font-semibold uppercase tracking-[0.2em] text-[#806318]"
                   >
                     {{ article.category }}
                   </span>
 
-
-                  <h3
-                    class="mt-3 text-2xl font-semibold leading-tight tracking-[-0.03em]"
-                  >
-                    {{ article.title }}
-                  </h3>
-
-
-                  <p
-                    class="mt-4 text-sm leading-6 text-black/45"
-                  >
-                    {{ article.excerpt }}
-                  </p>
-
-                </div>
-
-
-                <div
-                  class="absolute bottom-6 left-6 right-6 flex items-center justify-between border-t border-black/10 pt-4"
-                >
 
                   <span
                     class="text-[8px] font-semibold uppercase tracking-[0.18em] text-black/30"
@@ -595,132 +362,95 @@
                     {{ article.date }}
                   </span>
 
-
-                  <span
-                    class="h-1.5 w-1.5 rounded-full bg-[#d4af37]"
-                  ></span>
-
                 </div>
 
-              </article>
-
-            }
-
-          }
 
 
-          <!-- =================================================
-               EMPTY STATE
-          ================================================== -->
-
-          @empty {
-
-            <div
-              class="reveal lg:col-span-12"
-            >
-
-              <div
-                class="rounded-[2rem] border border-dashed border-black/15 bg-black/[0.02] px-6 py-16 text-center"
-              >
-
-                <span
-                  class="text-[9px] font-semibold uppercase tracking-[0.24em] text-[#8b6c1b]"
-                >
-                  Archivo AD
-                </span>
-
+                <!-- TITLE -->
 
                 <h3
-                  class="mt-4 text-2xl font-semibold tracking-tight"
+                  class="mt-6 max-w-2xl text-3xl font-semibold leading-[1.08] tracking-[-0.04em] sm:text-4xl lg:text-[2.8rem]"
                 >
-                  Próximamente encontrarás nuevas publicaciones.
+                  {{ article.title }}
                 </h3>
 
 
+
+                <!-- EXCERPT -->
+
                 <p
-                  class="mx-auto mt-3 max-w-md text-sm leading-6 text-black/40"
+                  class="mt-6 max-w-xl text-sm leading-7 text-black/50 sm:text-[15px]"
                 >
-                  Estamos preparando nuevas actividades,
-                  avisos y contenido del Centro Educativo AD.
+                  {{ article.excerpt }}
                 </p>
+
+
+
+                <!-- DECORATIVE LINE -->
+
+                <div
+                  class="mt-8 flex items-center gap-4"
+                >
+
+                  <span
+                    class="h-px w-10 bg-[#96751d]/50 transition-all duration-500 group-hover:w-16"
+                  ></span>
+
+                  <span
+                    class="text-[8px] font-semibold uppercase tracking-[0.2em] text-black/30"
+                  >
+                    Centro Educativo AD
+                  </span>
+
+                </div>
 
               </div>
 
             </div>
 
-          }
+          </article>
 
-        </div>
-
-      </section>
+        }
 
 
 
-      <!-- =========================================================================
-           04 · ARCHIVO
-      ========================================================================== -->
+        <!-- =====================================================================
+             EMPTY STATE
+        ====================================================================== -->
 
-      <section
-        class="reveal mt-20 overflow-hidden rounded-[2rem] border border-black/10"
-      >
+        @empty {
 
-        <div
-          class="grid lg:grid-cols-[1fr_auto]"
-        >
-
-
-          <!-- COPY -->
           <div
-            class="p-7 sm:p-9"
+            class="reveal py-20 text-center sm:py-28"
           >
 
             <span
-              class="text-[9px] font-semibold uppercase tracking-[0.25em] text-[#866819]"
+              class="text-[9px] font-semibold uppercase tracking-[0.28em] text-[#896a19]"
             >
-              Archivo de noticias
+              Noticias AD
             </span>
 
 
-            <h2
-              class="mt-4 text-3xl font-semibold tracking-[-0.04em]"
+            <h3
+              class="mx-auto mt-5 max-w-xl text-3xl font-semibold tracking-[-0.04em] sm:text-4xl"
             >
-              La historia de AD
-
-              <span class="text-black/30">
-                también se construye aquí.
-              </span>
-            </h2>
+              Estamos preparando
+              nuevas publicaciones.
+            </h3>
 
 
             <p
-              class="mt-4 max-w-xl text-sm leading-7 text-black/45"
+              class="mx-auto mt-5 max-w-md text-sm leading-7 text-black/40"
             >
-              Conforme avance el ciclo podrás consultar
-              publicaciones de meses anteriores
-              y recordar actividades importantes.
+              Muy pronto compartiremos nuevas actividades,
+              programas y momentos de nuestra comunidad.
             </p>
 
           </div>
 
+        }
 
-
-          <!-- ARROW -->
-          <div
-            class="flex min-h-[140px] items-center justify-center border-t border-black/10 bg-[#111] px-10 text-white lg:min-h-full lg:border-l lg:border-t-0"
-          >
-
-            <span
-              class="text-4xl text-[#d4af37]"
-              aria-hidden="true"
-            >
-              ↓
-            </span>
-
-          </div>
-
-        </div>
-
-      </section>
+      </div>
 
     </div>
 
@@ -729,16 +459,19 @@
 
 
   <!-- =========================================================================
-       05 · ECOEMS CALLOUT
+       03 · ECOEMS
   ========================================================================== -->
 
   <section
     class="relative overflow-hidden bg-[#0b0b0b] px-5 py-20 sm:px-8 lg:px-12 lg:py-24"
   >
 
+    <!-- AMBIENTE -->
+
     <div
-      class="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d4af37]/[0.06] blur-[170px]"
+      class="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d4af37]/[0.055] blur-[170px]"
     ></div>
+
 
 
     <div
@@ -749,6 +482,11 @@
         class="grid lg:grid-cols-[1fr_auto]"
       >
 
+
+        <!-- =========================================================
+             INFORMACIÓN
+        ========================================================== -->
+
         <div
           class="p-7 sm:p-9 lg:p-11"
         >
@@ -756,7 +494,7 @@
           <span
             class="text-[9px] font-semibold uppercase tracking-[0.25em] text-[#d4af37]"
           >
-            Próximo programa
+            Programa activo
           </span>
 
 
@@ -764,6 +502,7 @@
             class="mt-4 max-w-2xl text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl"
           >
             ECOEMS
+
             <span class="text-white/30">
               2026–2027
             </span>
@@ -773,18 +512,21 @@
           <p
             class="mt-4 max-w-xl text-sm leading-7 text-white/45"
           >
-            Conoce las fechas, horario y estructura
-            del próximo ciclo de preparación
-            para ingreso a media superior.
+            Conoce nuestro programa de preparación académica
+            para ingreso a educación media superior.
           </p>
 
         </div>
 
 
 
+        <!-- =========================================================
+             LINK ECOEMS
+        ========================================================== -->
+
         <a
           routerLink="/ecoems"
-          class="group flex min-h-[160px] items-center justify-between gap-8 bg-[#d4af37] p-7 text-black transition duration-300 hover:bg-[#e3c04d] lg:w-[270px] lg:flex-col lg:items-start lg:justify-between sm:p-9"
+          class="group flex min-h-[150px] items-center justify-between gap-8 bg-[#d4af37] p-7 text-black transition duration-300 hover:bg-[#e3c04d] sm:p-9 lg:w-[260px] lg:flex-col lg:items-start lg:justify-between"
         >
 
           <span
@@ -812,12 +554,15 @@
 
 
   <!-- =========================================================================
-       06 · CIERRE
+       04 · CIERRE
   ========================================================================== -->
 
   <section
-    class="relative overflow-hidden bg-[#080808] px-5 py-24 text-white sm:px-8 lg:px-12 lg:py-32"
+    class="relative overflow-hidden bg-[#080808] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28"
   >
+
+
+    <!-- WATERMARK -->
 
     <span
       class="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-[160px] font-semibold tracking-[-0.08em] text-white/[0.012] sm:text-[250px]"
@@ -825,6 +570,7 @@
     >
       AD
     </span>
+
 
 
     <div
@@ -841,31 +587,36 @@
       <h2
         class="mt-6 text-4xl font-semibold leading-[1.02] tracking-[-0.05em] sm:text-5xl lg:text-6xl"
       >
-        Sigue lo que estamos
+        Seguimos
 
-        <span class="block text-white/30">
-          construyendo.
+        <span class="text-white/30">
+          avanzando.
         </span>
       </h2>
 
 
       <p
-        class="mx-auto mt-6 max-w-xl text-sm leading-7 text-white/45"
+        class="mx-auto mt-6 max-w-lg text-sm leading-7 text-white/40"
       >
-        Nuevos cursos, actividades, programas
-        y momentos importantes seguirán apareciendo aquí.
+        Nuevos cursos, actividades y momentos importantes
+        seguirán formando parte de nuestra historia.
       </p>
 
 
+
+      <!-- =========================================================
+           VOLVER AL INICIO
+      ========================================================== -->
+
       <a
         routerLink="/"
-        class="group mx-auto mt-8 inline-flex items-center gap-6 rounded-full border border-white/12 bg-white/[0.025] px-6 py-4 text-sm font-medium text-white/70 transition hover:border-[#d4af37]/30 hover:text-white"
+        class="group mx-auto mt-8 inline-flex items-center gap-6 rounded-full border border-white/10 bg-white/[0.025] px-6 py-4 text-sm font-medium text-white/65 transition duration-300 hover:border-[#d4af37]/30 hover:bg-white/[0.04] hover:text-white"
       >
 
         Volver al inicio
 
         <span
-          class="transition group-hover:translate-x-1"
+          class="transition duration-300 group-hover:translate-x-1"
           aria-hidden="true"
         >
           →
@@ -874,19 +625,26 @@
       </a>
 
 
+
+      <!-- FOOT -->
+
       <div
         class="mt-12 flex items-center justify-center gap-4"
       >
 
-        <span class="hidden h-px w-14 bg-white/10 sm:block"></span>
+        <span
+          class="hidden h-px w-14 bg-white/10 sm:block"
+        ></span>
 
         <span
           class="text-[8px] font-medium uppercase tracking-[0.25em] text-white/20"
         >
-          Noticias · Actividades · Educación
+          Noticias · Actividades · Comunidad
         </span>
 
-        <span class="hidden h-px w-14 bg-white/10 sm:block"></span>
+        <span
+          class="hidden h-px w-14 bg-white/10 sm:block"
+        ></span>
 
       </div>
 

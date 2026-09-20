@@ -2,13 +2,19 @@
   class="header"
   [class.header--scrolled]="scrolled()"
 >
+
+  <!-- =====================================================================
+       BARRA PRINCIPAL
+  ====================================================================== -->
+
   <div class="header__shell">
 
     <div class="header__container">
 
-      <!-- =====================================================
+
+      <!-- =================================================================
            BRAND
-      ====================================================== -->
+      ================================================================== -->
 
       <a
         class="header__brand"
@@ -20,6 +26,7 @@
         <div class="header__monogram">
           <span>AD</span>
         </div>
+
 
         <div class="header__brand-copy">
 
@@ -37,18 +44,24 @@
 
 
 
-      <!-- =====================================================
+      <!-- =================================================================
            DESKTOP NAV
-      ====================================================== -->
+      ================================================================== -->
 
       <nav
         class="header__nav"
         aria-label="Navegación principal"
       >
 
+
+        <!-- =============================================================
+             HOME
+        ============================================================== -->
+
         <a routerLink="/">
           Inicio
         </a>
+
 
         <a
           routerLink="/"
@@ -56,6 +69,7 @@
         >
           Nosotros
         </a>
+
 
         <a
           routerLink="/"
@@ -65,7 +79,43 @@
         </a>
 
 
-        <!-- ECOEMS DESTACADO -->
+        <a
+          routerLink="/"
+          fragment="programas"
+        >
+          Programas
+        </a>
+
+
+        <a
+          routerLink="/"
+          fragment="ubicacion"
+        >
+          Ubicación
+        </a>
+
+
+
+        <!-- =============================================================
+             NOTICIAS
+        ============================================================== -->
+
+        <a
+          routerLink="/noticias"
+          class="header__content-link"
+        >
+          Noticias
+        </a>
+
+
+
+        <!-- =============================================================
+             PROGRAMAS ACADÉMICOS
+        ============================================================== -->
+
+
+        <!-- ECOEMS -->
+
         <a
           routerLink="/ecoems"
           class="header__ecoems"
@@ -78,33 +128,60 @@
         </a>
 
 
-        <a
-          routerLink="/"
-          fragment="programas"
-        >
-          Programas
-        </a>
 
-        <a routerLink="/noticias">
-          Noticias
-        </a>
+        <!-- UNIVERSIDAD -->
 
         <a
-          routerLink="/"
-          fragment="ubicacion"
+          routerLink="/universidad"
+          class="header__ecoems"
         >
-          Ubicación
+
+          <span class="header__ecoems-dot"></span>
+
+          Universidad
+
+        </a>
+
+
+
+        <!-- INGLÉS -->
+
+        <a
+          routerLink="/ingles"
+          class="header__ecoems"
+        >
+
+          <span class="header__ecoems-dot"></span>
+
+          Inglés
+
+        </a>
+
+
+
+        <!-- =============================================================
+             EMPLEADOS
+        ============================================================== -->
+
+        <a
+          routerLink="/empleados/login"
+          class="header__staff-link"
+        >
+          Empleados
         </a>
 
       </nav>
 
 
 
-      <!-- =====================================================
+      <!-- =================================================================
            ACTIONS
-      ====================================================== -->
+      ================================================================== -->
 
       <div class="header__actions">
+
+
+        <!-- WHATSAPP -->
 
         <a
           class="header__cta"
@@ -125,15 +202,16 @@
 
 
 
-        <!-- =================================================
-             MOBILE BUTTON
-        ================================================== -->
+        <!-- =============================================================
+             BOTÓN MOBILE
+        ============================================================== -->
 
         <button
           class="header__menu-button"
           type="button"
           [attr.aria-label]="menuOpen() ? 'Cerrar menú' : 'Abrir menú'"
           [attr.aria-expanded]="menuOpen()"
+          aria-controls="mobile-navigation"
           (click)="toggleMenu()"
         >
 
@@ -150,18 +228,24 @@
 
 
 
-  <!-- =====================================================
+  <!-- =====================================================================
        MOBILE MENU
-  ====================================================== -->
+  ====================================================================== -->
 
   @if (menuOpen()) {
 
-    <div class="header__mobile">
+    <div
+      id="mobile-navigation"
+      class="header__mobile"
+    >
 
       <div class="header__mobile-inner">
 
 
-        <!-- CABECERA -->
+        <!-- =============================================================
+             CABECERA MOBILE
+        ============================================================== -->
+
         <div class="header__mobile-top">
 
           <span>
@@ -176,184 +260,328 @@
 
 
 
-        <!-- =================================================
-             MOBILE NAV
-        ================================================== -->
+        <!-- =============================================================
+             HOME
+        ============================================================== -->
 
-        <nav>
+        <div class="header__mobile-section">
 
-          <a
-            routerLink="/"
-            (click)="closeMenu()"
-          >
-
-            <span class="header__mobile-number">
-              01
-            </span>
-
-            <strong>
-              Inicio
-            </strong>
-
-            <i aria-hidden="true">
-              →
-            </i>
-
-          </a>
+          <span class="header__mobile-section-label">
+            Centro Educativo AD
+          </span>
 
 
-          <a
-            routerLink="/"
-            fragment="nosotros"
-            (click)="closeMenu()"
-          >
-
-            <span class="header__mobile-number">
-              02
-            </span>
-
-            <strong>
-              Nosotros
-            </strong>
-
-            <i aria-hidden="true">
-              →
-            </i>
-
-          </a>
+          <nav aria-label="Secciones principales">
 
 
-          <a
-            routerLink="/"
-            fragment="servicios"
-            (click)="closeMenu()"
-          >
+            <!-- 01 · INICIO -->
 
-            <span class="header__mobile-number">
-              03
-            </span>
+            <a
+              routerLink="/"
+              (click)="closeMenu()"
+            >
 
-            <strong>
-              Servicios
-            </strong>
-
-            <i aria-hidden="true">
-              →
-            </i>
-
-          </a>
-
-
-
-          <!-- =============================================
-               ECOEMS MOBILE DESTACADO
-          ============================================== -->
-
-          <a
-            routerLink="/ecoems"
-            class="header__mobile-ecoems"
-            (click)="closeMenu()"
-          >
-
-            <span class="header__mobile-number">
-              04
-            </span>
-
-
-            <div class="header__mobile-link-copy">
+              <span class="header__mobile-number">
+                01
+              </span>
 
               <strong>
-                ECOEMS
+                Inicio
               </strong>
 
-              <small>
-                Ciclo 2026–2027
-              </small>
+              <i aria-hidden="true">
+                →
+              </i>
 
-            </div>
-
-
-            <span class="header__mobile-new">
-              Nuevo
-            </span>
-
-
-            <i aria-hidden="true">
-              ↗
-            </i>
-
-          </a>
+            </a>
 
 
 
-          <a
-            routerLink="/"
-            fragment="programas"
-            (click)="closeMenu()"
-          >
+            <!-- 02 · NOSOTROS -->
 
-            <span class="header__mobile-number">
-              05
-            </span>
+            <a
+              routerLink="/"
+              fragment="nosotros"
+              (click)="closeMenu()"
+            >
 
-            <strong>
-              Programas
-            </strong>
+              <span class="header__mobile-number">
+                02
+              </span>
 
-            <i aria-hidden="true">
-              →
-            </i>
+              <strong>
+                Nosotros
+              </strong>
 
-          </a>
+              <i aria-hidden="true">
+                →
+              </i>
 
-
-          <a
-            routerLink="/noticias"
-            (click)="closeMenu()"
-          >
-
-            <span class="header__mobile-number">
-              06
-            </span>
-
-            <strong>
-              Noticias
-            </strong>
-
-            <i aria-hidden="true">
-              →
-            </i>
-
-          </a>
-
-
-          <a
-            routerLink="/"
-            fragment="ubicacion"
-            (click)="closeMenu()"
-          >
-
-            <span class="header__mobile-number">
-              07
-            </span>
-
-            <strong>
-              Ubicación
-            </strong>
-
-            <i aria-hidden="true">
-              →
-            </i>
-
-          </a>
-
-        </nav>
+            </a>
 
 
 
-        <!-- =================================================
-             ECOEMS PROMO MOBILE
-        ================================================== -->
+            <!-- 03 · SERVICIOS -->
+
+            <a
+              routerLink="/"
+              fragment="servicios"
+              (click)="closeMenu()"
+            >
+
+              <span class="header__mobile-number">
+                03
+              </span>
+
+              <strong>
+                Servicios
+              </strong>
+
+              <i aria-hidden="true">
+                →
+              </i>
+
+            </a>
+
+
+
+            <!-- 04 · PROGRAMAS -->
+
+            <a
+              routerLink="/"
+              fragment="programas"
+              (click)="closeMenu()"
+            >
+
+              <span class="header__mobile-number">
+                04
+              </span>
+
+              <strong>
+                Programas
+              </strong>
+
+              <i aria-hidden="true">
+                →
+              </i>
+
+            </a>
+
+
+
+            <!-- 05 · UBICACIÓN -->
+
+            <a
+              routerLink="/"
+              fragment="ubicacion"
+              (click)="closeMenu()"
+            >
+
+              <span class="header__mobile-number">
+                05
+              </span>
+
+              <strong>
+                Ubicación
+              </strong>
+
+              <i aria-hidden="true">
+                →
+              </i>
+
+            </a>
+
+          </nav>
+
+        </div>
+
+
+
+        <!-- =============================================================
+             NOTICIAS
+        ============================================================== -->
+
+        <div class="header__mobile-section">
+
+          <span class="header__mobile-section-label">
+            Contenido
+          </span>
+
+
+          <nav aria-label="Contenido">
+
+
+            <!-- 06 · NOTICIAS -->
+
+            <a
+              routerLink="/noticias"
+              (click)="closeMenu()"
+            >
+
+              <span class="header__mobile-number">
+                06
+              </span>
+
+
+              <div class="header__mobile-link-copy">
+
+                <strong>
+                  Noticias
+                </strong>
+
+                <small>
+                  Novedades del centro
+                </small>
+
+              </div>
+
+
+              <i aria-hidden="true">
+                →
+              </i>
+
+            </a>
+
+          </nav>
+
+        </div>
+
+
+
+        <!-- =============================================================
+             PROGRAMAS ACADÉMICOS
+        ============================================================== -->
+
+        <div class="header__mobile-section">
+
+          <span class="header__mobile-section-label">
+            Programas académicos
+          </span>
+
+
+          <nav aria-label="Programas académicos">
+
+
+            <!-- =========================================================
+                 07 · ECOEMS
+            ========================================================== -->
+
+            <a
+              routerLink="/ecoems"
+              class="header__mobile-ecoems"
+              (click)="closeMenu()"
+            >
+
+              <span class="header__mobile-number">
+                07
+              </span>
+
+
+              <div class="header__mobile-link-copy">
+
+                <strong>
+                  ECOEMS
+                </strong>
+
+                <small>
+                  Ciclo 2026–2027
+                </small>
+
+              </div>
+
+
+              <span class="header__mobile-new">
+                Nuevo
+              </span>
+
+
+              <i aria-hidden="true">
+                ↗
+              </i>
+
+            </a>
+
+
+
+            <!-- =========================================================
+                 08 · UNIVERSIDAD
+            ========================================================== -->
+
+            <a
+              routerLink="/universidad"
+              class="header__mobile-ecoems"
+              (click)="closeMenu()"
+            >
+
+              <span class="header__mobile-number">
+                08
+              </span>
+
+
+              <div class="header__mobile-link-copy">
+
+                <strong>
+                  Universidad
+                </strong>
+
+                <small>
+                  Preparación de ingreso
+                </small>
+
+              </div>
+
+
+              <i aria-hidden="true">
+                ↗
+              </i>
+
+            </a>
+
+
+
+            <!-- =========================================================
+                 09 · INGLÉS
+            ========================================================== -->
+
+            <a
+              routerLink="/ingles"
+              class="header__mobile-ecoems"
+              (click)="closeMenu()"
+            >
+
+              <span class="header__mobile-number">
+                09
+              </span>
+
+
+              <div class="header__mobile-link-copy">
+
+                <strong>
+                  Inglés
+                </strong>
+
+                <small>
+                  Formación progresiva
+                </small>
+
+              </div>
+
+
+              <i aria-hidden="true">
+                ↗
+              </i>
+
+            </a>
+
+          </nav>
+
+        </div>
+
+
+
+        <!-- =============================================================
+             PROGRAMA DESTACADO
+        ============================================================== -->
 
         <a
           routerLink="/ecoems"
@@ -364,7 +592,7 @@
           <div>
 
             <span>
-              Próximo ciclo
+              Programa destacado
             </span>
 
             <strong>
@@ -372,12 +600,16 @@
             </strong>
 
             <p>
-              Conoce fechas, horario y programa.
+              Conoce fechas, modalidad y preparación académica.
             </p>
 
           </div>
 
-          <div class="header__mobile-program-arrow">
+
+          <div
+            class="header__mobile-program-arrow"
+            aria-hidden="true"
+          >
             ↗
           </div>
 
@@ -385,9 +617,9 @@
 
 
 
-        <!-- =================================================
+        <!-- =============================================================
              WHATSAPP
-        ================================================== -->
+        ============================================================== -->
 
         <a
           class="header__mobile-cta"
@@ -409,7 +641,49 @@
 
 
 
-        <!-- FOOTER -->
+        <!-- =============================================================
+             EMPLEADOS / ACCESO INTERNO
+        ============================================================== -->
+
+        <div class="header__mobile-internal">
+
+          <span>
+            Personal del centro
+          </span>
+
+
+          <a
+            routerLink="/empleados/login"
+            (click)="closeMenu()"
+          >
+
+            <div class="header__mobile-link-copy">
+
+              <strong>
+                Empleados
+              </strong>
+
+              <small>
+                Acceso interno
+              </small>
+
+            </div>
+
+
+            <span aria-hidden="true">
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+
+
+        <!-- =============================================================
+             FOOTER MOBILE
+        ============================================================== -->
+
         <div class="header__mobile-footer">
 
           <span>
@@ -417,7 +691,7 @@
           </span>
 
           <span>
-            Huixquilucan · Edo. Méx.
+            Palo Solo · Huixquilucan
           </span>
 
         </div>

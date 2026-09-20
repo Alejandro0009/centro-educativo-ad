@@ -1,0 +1,321 @@
+<main class="login-page">
+
+  <!-- =======================================================
+       FONDO
+  ======================================================== -->
+
+  <div class="login-page__glow login-page__glow--one"></div>
+  <div class="login-page__glow login-page__glow--two"></div>
+
+  <div class="login-page__grid"></div>
+
+
+
+  <!-- =======================================================
+       LOGIN
+  ======================================================== -->
+
+  <section class="login-card">
+
+
+    <!-- =====================================================
+         LADO IZQUIERDO
+    ====================================================== -->
+
+    <div class="login-card__brand">
+
+      <div class="login-card__brand-top">
+
+        <a
+          routerLink="/"
+          class="login-card__logo"
+        >
+
+          <div class="login-card__monogram">
+            AD
+          </div>
+
+
+          <div>
+
+            <strong>
+              Centro Educativo AD
+            </strong>
+
+            <span>
+              Sistema interno
+            </span>
+
+          </div>
+
+        </a>
+
+      </div>
+
+
+
+      <div class="login-card__brand-content">
+
+        <span class="login-card__eyebrow">
+          Panel administrativo
+        </span>
+
+
+        <h1>
+          Gestión interna
+          <span>Centro Educativo AD.</span>
+        </h1>
+
+
+        <p>
+          Plataforma de acceso exclusivo para el personal
+          autorizado del centro.
+        </p>
+
+      </div>
+
+
+
+      <div class="login-card__brand-footer">
+
+        <span class="login-card__status-dot"></span>
+
+        <span>
+          Sistema disponible
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FORMULARIO
+    ====================================================== -->
+
+    <div class="login-card__form-area">
+
+
+      <!-- MOBILE BRAND -->
+
+      <div class="login-card__mobile-logo">
+
+        <div class="login-card__monogram">
+          AD
+        </div>
+
+
+        <div>
+
+          <strong>
+            Centro Educativo AD
+          </strong>
+
+          <span>
+            Acceso interno
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- CABECERA -->
+
+      <div class="login-card__heading">
+
+        <span>
+          Personal autorizado
+        </span>
+
+
+        <h2>
+          Bienvenido
+        </h2>
+
+
+        <p>
+          Ingresa tus credenciales para continuar.
+        </p>
+
+      </div>
+
+
+
+      <!-- ===================================================
+           FORM
+      ==================================================== -->
+
+      <form
+        [formGroup]="loginForm"
+        (ngSubmit)="login()"
+        class="login-form"
+      >
+
+
+        <!-- USUARIO -->
+
+        <div class="login-form__group">
+
+          <label for="username">
+            Usuario
+          </label>
+
+
+          <div class="login-form__input">
+
+            <span
+              class="login-form__icon"
+              aria-hidden="true"
+            >
+              AD
+            </span>
+
+
+            <input
+              id="username"
+              type="text"
+              formControlName="username"
+              autocomplete="username"
+              placeholder="Ingresa tu usuario"
+            />
+
+          </div>
+
+
+          @if (
+            loginForm.controls.username.touched &&
+            loginForm.controls.username.invalid
+          ) {
+
+            <p class="login-form__error">
+              El usuario es obligatorio.
+            </p>
+
+          }
+
+        </div>
+
+
+
+        <!-- CONTRASEÑA -->
+
+        <div class="login-form__group">
+
+          <label for="password">
+            Contraseña
+          </label>
+
+
+          <div class="login-form__input">
+
+            <span
+              class="login-form__lock"
+              aria-hidden="true"
+            >
+              •
+            </span>
+
+
+            <input
+              id="password"
+              [type]="showPassword() ? 'text' : 'password'"
+              formControlName="password"
+              autocomplete="current-password"
+              placeholder="Ingresa tu contraseña"
+            />
+
+
+            <button
+              type="button"
+              class="login-form__show"
+              (click)="togglePassword()"
+            >
+              {{ showPassword() ? 'Ocultar' : 'Ver' }}
+            </button>
+
+          </div>
+
+
+          @if (
+            loginForm.controls.password.touched &&
+            loginForm.controls.password.invalid
+          ) {
+
+            <p class="login-form__error">
+              La contraseña es obligatoria.
+            </p>
+
+          }
+
+        </div>
+
+
+
+        <!-- ERROR LOGIN -->
+
+        @if (errorMessage()) {
+
+          <div class="login-form__alert">
+
+            <span aria-hidden="true">
+              !
+            </span>
+
+            <p>
+              {{ errorMessage() }}
+            </p>
+
+          </div>
+
+        }
+
+
+
+        <!-- BOTÓN -->
+
+        <button
+          type="submit"
+          class="login-form__submit"
+        >
+
+          <span>
+            Iniciar sesión
+          </span>
+
+
+          <span
+            class="login-form__submit-arrow"
+            aria-hidden="true"
+          >
+            →
+          </span>
+
+        </button>
+
+      </form>
+
+
+
+      <!-- FOOTER -->
+
+      <div class="login-card__footer">
+
+        <span>
+          Acceso exclusivo para personal autorizado
+        </span>
+
+
+        <a routerLink="/">
+          ← Volver al sitio
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>

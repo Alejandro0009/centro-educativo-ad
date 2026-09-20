@@ -1,0 +1,904 @@
+<div class="staff-dashboard">
+
+
+  <!-- =========================================================
+       SIDEBAR
+  ========================================================== -->
+
+  <aside class="staff-sidebar">
+
+
+    <!-- =====================================================
+         BRAND
+    ====================================================== -->
+
+    <div class="staff-sidebar__brand">
+
+      <div class="staff-sidebar__monogram">
+        AD
+      </div>
+
+
+      <div>
+
+        <strong>
+          Centro Educativo AD
+        </strong>
+
+        <span>
+          Panel interno
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         NAVEGACIÓN
+    ====================================================== -->
+
+    <nav class="staff-sidebar__nav">
+
+      <span class="staff-sidebar__label">
+        Navegación
+      </span>
+
+
+      <!-- INICIO -->
+
+      <button
+        type="button"
+        class="staff-sidebar__item staff-sidebar__item--active"
+      >
+
+        <span class="staff-sidebar__icon">
+          01
+        </span>
+
+        <span>
+          Inicio
+        </span>
+
+      </button>
+
+
+
+      <!-- ESTUDIANTES -->
+
+      <button
+        type="button"
+        class="staff-sidebar__item"
+      >
+
+        <span class="staff-sidebar__icon">
+          02
+        </span>
+
+        <span>
+          Estudiantes
+        </span>
+
+      </button>
+
+
+
+      <!-- HORARIOS -->
+
+      <button
+        type="button"
+        class="staff-sidebar__item"
+      >
+
+        <span class="staff-sidebar__icon">
+          03
+        </span>
+
+        <span>
+          Horarios
+        </span>
+
+      </button>
+
+
+
+      <!-- ASISTENCIA -->
+
+      <button
+        type="button"
+        class="staff-sidebar__item"
+      >
+
+        <span class="staff-sidebar__icon">
+          04
+        </span>
+
+        <span>
+          Asistencia
+        </span>
+
+      </button>
+
+
+
+      <!-- PAGOS -->
+
+      <button
+        type="button"
+        class="staff-sidebar__item"
+      >
+
+        <span class="staff-sidebar__icon">
+          05
+        </span>
+
+        <span>
+          Pagos
+        </span>
+
+      </button>
+
+
+
+      <!-- =====================================================
+           TASK MANAGER
+      ====================================================== -->
+
+      <a
+        href="https://centro-educativo-ad-task-manager.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="staff-sidebar__item"
+      >
+
+        <span class="staff-sidebar__icon">
+          06
+        </span>
+
+        <span>
+          Pendientes
+        </span>
+
+        <span class="staff-sidebar__external">
+          ↗
+        </span>
+
+      </a>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         FOOTER SIDEBAR
+    ====================================================== -->
+
+    <div class="staff-sidebar__footer">
+
+      <div class="staff-sidebar__user">
+
+        <div class="staff-sidebar__avatar">
+          AD
+        </div>
+
+
+        <div>
+
+          <strong>
+            {{ username }}
+          </strong>
+
+          <span>
+            Personal autorizado
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <button
+        type="button"
+        class="staff-sidebar__logout"
+        (click)="logout()"
+      >
+        Cerrar sesión
+      </button>
+
+    </div>
+
+  </aside>
+
+
+
+  <!-- =========================================================
+       CONTENIDO PRINCIPAL
+  ========================================================== -->
+
+  <main class="staff-main">
+
+
+    <!-- =======================================================
+         HEADER
+    ======================================================== -->
+
+    <header class="staff-header">
+
+      <div>
+
+        <span class="staff-header__eyebrow">
+          Centro Educativo AD
+        </span>
+
+
+        <h1>
+          Panel interno
+        </h1>
+
+      </div>
+
+
+      <div class="staff-header__actions">
+
+        <a
+          routerLink="/"
+          class="staff-header__site"
+        >
+          Ver sitio público
+
+          <span>
+            ↗
+          </span>
+        </a>
+
+
+        <button
+          type="button"
+          class="staff-header__logout"
+          (click)="logout()"
+        >
+          Salir
+        </button>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- =======================================================
+         BIENVENIDA
+    ======================================================== -->
+
+    <section class="staff-welcome">
+
+      <div class="staff-welcome__content">
+
+        <span class="staff-welcome__label">
+          Inicio
+        </span>
+
+
+        <h2>
+          Bienvenido al centro de control.
+
+          <span>
+            Todo empieza aquí.
+          </span>
+        </h2>
+
+
+        <p>
+          Plataforma interna para organizar la operación,
+          seguimiento y herramientas de Centro Educativo AD.
+        </p>
+
+      </div>
+
+
+      <div class="staff-welcome__status">
+
+        <span class="staff-welcome__status-dot"></span>
+
+
+        <div>
+
+          <small>
+            Estado
+          </small>
+
+          <strong>
+            Sesión activa
+          </strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         RESUMEN
+    ======================================================== -->
+
+    <section class="staff-summary">
+
+
+      <!-- ESTUDIANTES -->
+
+      <article class="staff-summary__card">
+
+        <span class="staff-summary__number">
+          01
+        </span>
+
+
+        <div>
+
+          <small>
+            Área
+          </small>
+
+          <strong>
+            Estudiantes
+          </strong>
+
+          <p>
+            Información, tutores, niveles y seguimiento.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- HORARIOS -->
+
+      <article class="staff-summary__card">
+
+        <span class="staff-summary__number">
+          02
+        </span>
+
+
+        <div>
+
+          <small>
+            Organización
+          </small>
+
+          <strong>
+            Horarios
+          </strong>
+
+          <p>
+            Clases, disponibilidad y agenda académica.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ASISTENCIA -->
+
+      <article class="staff-summary__card">
+
+        <span class="staff-summary__number">
+          03
+        </span>
+
+
+        <div>
+
+          <small>
+            Control
+          </small>
+
+          <strong>
+            Asistencia
+          </strong>
+
+          <p>
+            Registro y seguimiento de sesiones.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PAGOS -->
+
+      <article class="staff-summary__card">
+
+        <span class="staff-summary__number">
+          04
+        </span>
+
+
+        <div>
+
+          <small>
+            Administración
+          </small>
+
+          <strong>
+            Pagos
+          </strong>
+
+          <p>
+            Control de pagos y movimientos.
+          </p>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         HERRAMIENTAS CONECTADAS
+    ======================================================== -->
+
+    <section class="staff-tools">
+
+
+      <!-- HEADER -->
+
+      <div class="staff-tools__header">
+
+        <div>
+
+          <span>
+            Ecosistema AD
+          </span>
+
+
+          <h3>
+            Herramientas conectadas
+          </h3>
+
+
+          <p>
+            Accede desde el panel interno a las plataformas
+            utilizadas por el equipo de Centro Educativo AD.
+          </p>
+
+        </div>
+
+
+        <span class="staff-tools__count">
+          01 herramienta
+        </span>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           AD TASK MANAGER
+      ====================================================== -->
+
+      <a
+        href="https://centro-educativo-ad-task-manager.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="staff-tool"
+      >
+
+        <div class="staff-tool__main">
+
+
+          <!-- ICON -->
+
+          <div class="staff-tool__icon">
+            ✓
+          </div>
+
+
+
+          <!-- CONTENT -->
+
+          <div class="staff-tool__content">
+
+            <div class="staff-tool__meta">
+
+              <span class="staff-tool__status">
+
+                <i></i>
+
+                Activo
+
+              </span>
+
+
+              <span>
+                Aplicación conectada
+              </span>
+
+            </div>
+
+
+
+            <h4>
+              AD Task Manager
+            </h4>
+
+
+            <p>
+              Espacio de trabajo para organizar pendientes,
+              actividades y tareas de los colaboradores
+              de Centro Educativo AD.
+            </p>
+
+
+
+            <div class="staff-tool__features">
+
+              <span>
+                Pendientes
+              </span>
+
+              <span>
+                Tareas
+              </span>
+
+              <span>
+                Organización
+              </span>
+
+              <span>
+                Colaboración
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ACTION -->
+
+        <div class="staff-tool__action">
+
+          <span>
+            Abrir plataforma
+          </span>
+
+
+          <div aria-hidden="true">
+            ↗
+          </div>
+
+        </div>
+
+      </a>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         ZONA CENTRAL
+    ======================================================== -->
+
+    <section class="staff-content-grid">
+
+
+      <!-- =====================================================
+           MÓDULOS INTERNOS
+      ====================================================== -->
+
+      <div class="staff-panel">
+
+
+        <!-- HEADER -->
+
+        <div class="staff-panel__header">
+
+          <div>
+
+            <span>
+              Plataforma interna
+            </span>
+
+            <h3>
+              Próximos módulos
+            </h3>
+
+          </div>
+
+
+          <span class="staff-panel__badge">
+            En desarrollo
+          </span>
+
+        </div>
+
+
+
+        <!-- ===================================================
+             MODULES
+        ==================================================== -->
+
+        <div class="staff-modules">
+
+
+          <!-- ESTUDIANTES -->
+
+          <button
+            type="button"
+            class="staff-module"
+          >
+
+            <div class="staff-module__top">
+
+              <span>
+                01
+              </span>
+
+              <span>
+                →
+              </span>
+
+            </div>
+
+
+            <strong>
+              Estudiantes
+            </strong>
+
+
+            <p>
+              Expedientes, tutores, información académica
+              y seguimiento.
+            </p>
+
+          </button>
+
+
+
+          <!-- HORARIOS -->
+
+          <button
+            type="button"
+            class="staff-module"
+          >
+
+            <div class="staff-module__top">
+
+              <span>
+                02
+              </span>
+
+              <span>
+                →
+              </span>
+
+            </div>
+
+
+            <strong>
+              Horarios
+            </strong>
+
+
+            <p>
+              Visualización y organización de clases
+              disponibles.
+            </p>
+
+          </button>
+
+
+
+          <!-- ASISTENCIA -->
+
+          <button
+            type="button"
+            class="staff-module"
+          >
+
+            <div class="staff-module__top">
+
+              <span>
+                03
+              </span>
+
+              <span>
+                →
+              </span>
+
+            </div>
+
+
+            <strong>
+              Asistencia
+            </strong>
+
+
+            <p>
+              Registro de sesiones, faltas y seguimiento.
+            </p>
+
+          </button>
+
+
+
+          <!-- PAGOS -->
+
+          <button
+            type="button"
+            class="staff-module"
+          >
+
+            <div class="staff-module__top">
+
+              <span>
+                04
+              </span>
+
+              <span>
+                →
+              </span>
+
+            </div>
+
+
+            <strong>
+              Pagos
+            </strong>
+
+
+            <p>
+              Administración de pagos, saldos
+              y movimientos.
+            </p>
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           INFORMACIÓN DEL SISTEMA
+      ====================================================== -->
+
+      <aside class="staff-info">
+
+        <span class="staff-info__label">
+          Sistema AD
+        </span>
+
+
+        <h3>
+          Ecosistema interno
+        </h3>
+
+
+        <p>
+          Este panel funcionará como punto central
+          para acceder a las herramientas y módulos
+          utilizados por Centro Educativo AD.
+        </p>
+
+
+
+        <div class="staff-info__divider"></div>
+
+
+
+        <!-- ACCESO -->
+
+        <div class="staff-info__item">
+
+          <span>
+            Acceso
+          </span>
+
+          <strong>
+            Personal interno
+          </strong>
+
+        </div>
+
+
+
+        <!-- ESTADO -->
+
+        <div class="staff-info__item">
+
+          <span>
+            Estado
+          </span>
+
+          <strong>
+            Desarrollo
+          </strong>
+
+        </div>
+
+
+
+        <!-- HERRAMIENTAS -->
+
+        <div class="staff-info__item">
+
+          <span>
+            Herramientas
+          </span>
+
+          <strong>
+            01 conectada
+          </strong>
+
+        </div>
+
+
+
+        <!-- VERSIÓN -->
+
+        <div class="staff-info__item">
+
+          <span>
+            Versión
+          </span>
+
+          <strong>
+            AD / 01
+          </strong>
+
+        </div>
+
+
+
+        <!-- STATUS -->
+
+        <div class="staff-info__footer">
+
+          <span class="staff-info__dot"></span>
+
+          Sistema activo
+
+        </div>
+
+      </aside>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         FOOTER
+    ======================================================== -->
+
+    <footer class="staff-footer">
+
+      <span>
+        Centro Educativo AD
+      </span>
+
+
+      <span>
+        Plataforma interna · 2026
+      </span>
+
+    </footer>
+
+  </main>
+
+</div>

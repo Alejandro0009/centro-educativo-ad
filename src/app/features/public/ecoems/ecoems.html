@@ -1,70 +1,76 @@
 <!-- =========================================================================
-     01 · HERO ECOEMS
+     01 · HERO ECOEMS · 2026–2027
 ============================================================================ -->
 
 <section
-  class="relative isolate min-h-[100svh] overflow-hidden bg-[#080808] px-5 pb-12 pt-28 text-white sm:px-8 lg:px-12 lg:pb-16 lg:pt-32"
+  class="relative isolate min-h-[100svh] overflow-hidden bg-[#070707] px-5 pb-10 pt-28 text-white sm:px-8 lg:px-12 lg:pb-12 lg:pt-32"
 >
 
   <!-- =========================================================
-       AMBIENTE
+       ATMÓSFERA
   ========================================================== -->
 
   <div
-    class="pointer-events-none absolute -left-52 top-[12%] h-[620px] w-[620px] rounded-full bg-[#d4af37]/[0.07] blur-[190px]"
+    class="pointer-events-none absolute inset-0 opacity-[0.035]"
+    style="
+      background-image:
+        linear-gradient(rgba(255,255,255,.18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.18) 1px, transparent 1px);
+      background-size: 70px 70px;
+    "
   ></div>
 
   <div
-    class="pointer-events-none absolute -right-48 bottom-0 h-[580px] w-[580px] rounded-full bg-white/[0.025] blur-[180px]"
+    class="pointer-events-none absolute -left-52 top-0 h-[650px] w-[650px] rounded-full bg-[#d4af37]/[0.09] blur-[190px]"
   ></div>
 
   <div
-    class="pointer-events-none absolute left-[45%] top-[30%] h-[500px] w-[500px] rounded-full bg-[#d4af37]/[0.025] blur-[180px]"
+    class="pointer-events-none absolute -right-64 bottom-[-120px] h-[700px] w-[700px] rounded-full bg-[#d4af37]/[0.055] blur-[220px]"
   ></div>
 
-
-  <!-- WATERMARK -->
-  <span
-    class="pointer-events-none absolute -left-8 bottom-0 hidden text-[230px] font-semibold leading-none tracking-[-0.1em] text-white/[0.017] xl:block"
-    aria-hidden="true"
-  >
-    27
-  </span>
-
+  <div
+    class="pointer-events-none absolute left-[48%] top-[25%] h-[450px] w-[450px] rounded-full bg-white/[0.018] blur-[180px]"
+  ></div>
 
 
   <!-- =========================================================
-       CONTENEDOR
+       MARCA DE FONDO
+  ========================================================== -->
+
+  <span
+    class="pointer-events-none absolute -right-8 top-[8%] hidden select-none text-[clamp(10rem,19vw,20rem)] font-semibold leading-none tracking-[-0.09em] text-white/[0.018] xl:block"
+    aria-hidden="true"
+  >
+    AD
+  </span>
+
+
+  <!-- =========================================================
+       CONTENIDO PRINCIPAL
   ========================================================== -->
 
   <div
-    class="relative mx-auto grid min-h-[calc(100svh-8rem)] w-full max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14"
+    class="relative mx-auto grid min-h-[calc(100svh-8rem)] w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.03fr_0.97fr] lg:gap-16"
   >
 
-    <!-- =======================================================
-         CONTENIDO
-    ======================================================== -->
+    <!-- =====================================================
+         LEFT
+    ====================================================== -->
 
-    <div
-      class="reveal relative z-20 py-6 lg:py-12"
-    >
+    <div class="reveal relative z-20 py-6 lg:py-12">
 
-      <!-- =====================================================
-           BADGES
-      ====================================================== -->
+      <!-- STATUS -->
 
-      <div
-        class="mb-7 flex flex-wrap items-center gap-3"
-      >
+      <div class="mb-8 flex flex-wrap items-center gap-3">
 
         <span
-          class="inline-flex items-center gap-2 rounded-full border border-[#d4af37]/25 bg-[#d4af37]/[0.055] px-4 py-2 text-[9px] font-semibold uppercase tracking-[0.24em] text-[#d4af37]"
+          class="inline-flex items-center gap-3 rounded-full border border-[#d4af37]/25 bg-[#d4af37]/[0.055] px-4 py-2"
         >
 
           <span class="relative flex h-2 w-2">
 
             <span
-              class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#d4af37] opacity-25"
+              class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#d4af37] opacity-30"
             ></span>
 
             <span
@@ -73,138 +79,98 @@
 
           </span>
 
-          Inscripciones · Ciclo 2026–2027
+          <span
+            class="text-[9px] font-semibold uppercase tracking-[0.24em] text-[#d4af37]"
+          >
+            Inscripciones abiertas
+          </span>
 
         </span>
-
 
         <span
           class="text-[9px] font-medium uppercase tracking-[0.22em] text-white/25"
         >
-          Centro Educativo AD
+          Ciclo 2026–2027
         </span>
 
       </div>
 
 
-
-      <!-- =====================================================
-           EYEBROW
-      ====================================================== -->
+      <!-- EYEBROW -->
 
       <div class="flex items-center gap-4">
 
-        <span
-          class="h-px w-10 bg-[#d4af37]/70"
-        ></span>
+        <span class="h-px w-10 bg-[#d4af37]"></span>
 
         <span
-          class="text-[9px] font-semibold uppercase tracking-[0.28em] text-white/35"
+          class="text-[9px] font-semibold uppercase tracking-[0.3em] text-white/35"
         >
-          Ingreso a educación media superior
+          Centro Educativo AD · ECOEMS
         </span>
 
       </div>
 
 
-
       <!-- =====================================================
-           TITULAR
+           TITLE
       ====================================================== -->
 
       <h1
-        class="mt-7 max-w-3xl text-[clamp(3.8rem,7vw,7rem)] font-semibold leading-[0.84] tracking-[-0.065em]"
+        class="mt-7 max-w-4xl text-[clamp(3.9rem,7.4vw,7.5rem)] font-semibold leading-[0.84] tracking-[-0.07em]"
       >
 
         <span class="block text-white">
-          Prepárate.
+          Tu ingreso
         </span>
 
         <span
-          class="block text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.30)]"
+          class="block text-white/25"
         >
-          Practica.
+          comienza
         </span>
 
         <span
-          class="block bg-gradient-to-r from-[#d4af37] via-[#f0d77c] to-[#a98220] bg-clip-text text-transparent"
+          class="block bg-gradient-to-r from-[#d4af37] via-[#f5df91] to-[#a77f1c] bg-clip-text text-transparent"
         >
-          Ingresa.
+          aquí.
         </span>
 
       </h1>
 
 
-
-      <!-- =====================================================
-           DESCRIPCIÓN
-      ====================================================== -->
+      <!-- COPY -->
 
       <p
-        class="mt-7 max-w-xl text-sm leading-7 text-white/50 sm:text-base sm:leading-8"
+        class="mt-8 max-w-xl text-sm leading-7 text-white/45 sm:text-base sm:leading-8"
       >
-        Preparación académica estructurada para estudiantes
-        que buscan fortalecer conocimientos, practicar
-        y llegar mejor preparados a su proceso de ingreso
-        a educación media superior.
+        Un programa de preparación académica para fortalecer
+        conocimientos, desarrollar habilidades y avanzar con
+        estructura durante tu proceso de ingreso a educación
+        media superior.
       </p>
 
 
-
       <!-- =====================================================
-           DATOS RÁPIDOS
+           CTA
       ====================================================== -->
 
-      <div
-        class="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3"
-      >
+      <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
 
-        <span
-          class="inline-flex items-center gap-2 text-[9px] font-semibold uppercase tracking-[0.18em] text-white/35"
-        >
-          <span class="h-1.5 w-1.5 rounded-full bg-[#d4af37]"></span>
-          10 materias
-        </span>
-
-        <span
-          class="inline-flex items-center gap-2 text-[9px] font-semibold uppercase tracking-[0.18em] text-white/35"
-        >
-          <span class="h-1.5 w-1.5 rounded-full bg-[#d4af37]"></span>
-          +300 temas
-        </span>
-
-        <span
-          class="inline-flex items-center gap-2 text-[9px] font-semibold uppercase tracking-[0.18em] text-white/35"
-        >
-          <span class="h-1.5 w-1.5 rounded-full bg-[#d4af37]"></span>
-          3 horas por sesión
-        </span>
-
-      </div>
-
-
-
-      <!-- =====================================================
-           BOTONES
-      ====================================================== -->
-
-      <div
-        class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
-      >
+        <!-- INSCRIPCIÓN -->
 
         <a
-          href="https://wa.me/525588357806?text=Hola%20Centro%20Educativo%20AD.%0A%0AMe%20interesa%20el%20programa%20ECOEMS%202026-2027.%0A%0ANombre%20del%20estudiante%3A%0AEdad%3A"
+          href="https://forms.gle/FCtpCZhHXxbjRdPo7"
           target="_blank"
           rel="noopener noreferrer"
-          class="group inline-flex items-center justify-between gap-8 rounded-full bg-[#d4af37] px-6 py-4 text-sm font-semibold text-black shadow-[0_16px_50px_rgba(212,175,55,0.15)] transition duration-300 hover:scale-[1.02] hover:bg-[#e5c657] hover:shadow-[0_20px_70px_rgba(212,175,55,0.22)]"
+          class="group inline-flex items-center justify-between gap-10 rounded-full bg-[#d4af37] px-6 py-3.5 text-sm font-semibold text-black shadow-[0_18px_65px_rgba(212,175,55,0.16)] transition duration-300 hover:scale-[1.025] hover:bg-[#e6c95e] hover:shadow-[0_24px_85px_rgba(212,175,55,0.24)]"
         >
 
           <span>
-            Reservar lugar
+            Inscríbete ahora
           </span>
 
           <span
-            class="flex h-9 w-9 items-center justify-center rounded-full bg-black/10 transition duration-300 group-hover:translate-x-1"
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-black/10 transition duration-300 group-hover:translate-x-1 group-hover:bg-black/15"
             aria-hidden="true"
           >
             ↗
@@ -213,17 +179,19 @@
         </a>
 
 
+        <!-- PROGRAMA -->
+
         <a
           href="#programa"
-          class="group inline-flex items-center justify-between gap-7 rounded-full border border-white/12 bg-white/[0.025] px-6 py-4 text-sm font-medium text-white/65 transition duration-300 hover:border-white/25 hover:bg-white/[0.05] hover:text-white"
+          class="group inline-flex items-center justify-between gap-8 rounded-full border border-white/10 bg-white/[0.025] px-6 py-3.5 text-sm font-medium text-white/60 backdrop-blur-sm transition duration-300 hover:border-white/20 hover:bg-white/[0.05] hover:text-white"
         >
 
           <span>
-            Conocer el programa
+            Explorar programa
           </span>
 
           <span
-            class="transition duration-300 group-hover:translate-y-1"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition duration-300 group-hover:translate-y-1"
             aria-hidden="true"
           >
             ↓
@@ -233,165 +201,211 @@
 
       </div>
 
+
+      <!-- =====================================================
+           STATS
+      ====================================================== -->
+
+      <div
+        class="mt-11 grid max-w-xl grid-cols-3 border-y border-white/[0.08]"
+      >
+
+        <div class="py-5 pr-4">
+
+          <strong
+            class="block text-2xl font-semibold tracking-[-0.04em] text-white"
+          >
+            10
+          </strong>
+
+          <span
+            class="mt-1 block text-[8px] font-semibold uppercase tracking-[0.2em] text-white/25"
+          >
+            Materias
+          </span>
+
+        </div>
+
+
+        <div class="border-x border-white/[0.08] px-5 py-5">
+
+          <strong
+            class="block text-2xl font-semibold tracking-[-0.04em] text-[#d4af37]"
+          >
+            +300
+          </strong>
+
+          <span
+            class="mt-1 block text-[8px] font-semibold uppercase tracking-[0.2em] text-white/25"
+          >
+            Temas
+          </span>
+
+        </div>
+
+
+        <div class="py-5 pl-5">
+
+          <strong
+            class="block text-2xl font-semibold tracking-[-0.04em] text-white"
+          >
+            3h
+          </strong>
+
+          <span
+            class="mt-1 block text-[8px] font-semibold uppercase tracking-[0.2em] text-white/25"
+          >
+            Cada sábado
+          </span>
+
+        </div>
+
+      </div>
+
     </div>
 
 
 
-    <!-- =======================================================
-         VISUAL
-    ======================================================== -->
+    <!-- =====================================================
+         RIGHT · EXPERIENCE CARD
+    ====================================================== -->
 
-    <div
-      class="reveal reveal--right relative"
-    >
+    <div class="reveal reveal--right relative">
 
-      <div
-        class="group relative mx-auto max-w-[650px]"
-      >
+      <div class="group relative mx-auto max-w-[610px]">
 
-        <!-- marco exterior -->
+        <!-- MARCO -->
+
         <div
-          class="absolute -inset-3 rounded-[2.4rem] border border-[#d4af37]/10 transition duration-700 group-hover:-inset-4 group-hover:border-[#d4af37]/20"
+          class="absolute -inset-3 rounded-[2.6rem] border border-[#d4af37]/10 transition duration-700 group-hover:-inset-4 group-hover:border-[#d4af37]/20"
           aria-hidden="true"
         ></div>
 
 
-        <!-- ===================================================
-             FOTO
-        ==================================================== -->
+        <!-- FOTO -->
 
         <div
-          class="relative min-h-[560px] overflow-hidden rounded-[2.1rem] border border-white/10 bg-[#111] shadow-[0_40px_120px_rgba(0,0,0,0.48)] sm:min-h-[640px]"
+          class="relative min-h-[590px] overflow-hidden rounded-[2.3rem] border border-white/10 bg-[#111] shadow-[0_45px_140px_rgba(0,0,0,0.55)] sm:min-h-[680px]"
         >
 
           <img
             src="/images/img10.jpg"
-            alt="Estudiantes de Centro Educativo AD preparándose para ECOEMS"
+            alt="Estudiantes preparándose para ECOEMS en Centro Educativo AD"
             fetchpriority="high"
             decoding="async"
-            class="absolute inset-0 h-full w-full object-cover object-center transition duration-[1200ms] ease-out group-hover:scale-[1.025]"
+            class="absolute inset-0 h-full w-full object-cover object-center transition duration-[1400ms] ease-out group-hover:scale-[1.035]"
           />
 
 
-          <!-- sombreado -->
+          <!-- OVERLAYS -->
+
           <div
-            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/5 to-black/10"
+            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/10 to-black/20"
           ></div>
 
           <div
-            class="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent"
+            class="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/25 via-transparent to-transparent"
           ></div>
 
 
-
-          <!-- =================================================
-               ETIQUETA SUPERIOR
-          ================================================== -->
+          <!-- TOP -->
 
           <div
-            class="absolute left-5 top-5 sm:left-6 sm:top-6"
+            class="absolute inset-x-0 top-0 flex items-start justify-between p-6 sm:p-8"
           >
 
             <span
-              class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/35 px-4 py-2 text-[9px] font-semibold uppercase tracking-[0.22em] text-white/75 backdrop-blur-xl"
+              class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/30 px-4 py-2 text-[8px] font-semibold uppercase tracking-[0.22em] text-white/70 backdrop-blur-xl"
             >
+              <span class="h-1.5 w-1.5 rounded-full bg-[#d4af37]"></span>
+              ECOEMS · AD
+            </span>
 
-              <span
-                class="h-1.5 w-1.5 rounded-full bg-[#d4af37]"
-              ></span>
-
-              Preparación real
-
+            <span
+              class="text-[9px] font-semibold uppercase tracking-[0.2em] text-white/30"
+            >
+              26 / 27
             </span>
 
           </div>
 
 
-
-          <!-- ECOEMS WATERMARK -->
-          <span
-            class="pointer-events-none absolute right-5 top-4 text-[58px] font-semibold leading-none tracking-[-0.07em] text-white/[0.07] sm:text-[72px]"
-            aria-hidden="true"
-          >
-            AD
-          </span>
-
-
-
-          <!-- =================================================
-               TEXTO SOBRE FOTO
-          ================================================== -->
+          <!-- BOTTOM CONTENT -->
 
           <div
             class="absolute inset-x-0 bottom-0 p-6 sm:p-8"
           >
 
+            <div class="mb-5 h-px w-full bg-white/10">
+
+              <div class="h-px w-1/3 bg-[#d4af37]"></div>
+
+            </div>
+
+
             <span
               class="text-[9px] font-semibold uppercase tracking-[0.24em] text-[#d4af37]"
             >
-              ECOEMS · Centro Educativo AD
+              Preparación académica
             </span>
 
 
             <h2
-              class="mt-3 max-w-md text-2xl font-semibold leading-tight tracking-[-0.03em] sm:text-3xl"
+              class="mt-3 max-w-md text-3xl font-semibold leading-[1.05] tracking-[-0.04em] sm:text-4xl"
             >
-              Preparación que se construye
-              clase a clase.
+              Construye tu preparación
+              <span class="text-white/40">
+                paso a paso.
+              </span>
             </h2>
 
 
             <p
-              class="mt-3 max-w-md text-sm leading-6 text-white/55"
+              class="mt-4 max-w-md text-sm leading-6 text-white/45"
             >
-              Explicación, práctica y seguimiento
-              durante todo el proceso.
+              Diagnóstico, explicación, práctica y seguimiento
+              durante todo el ciclo.
             </p>
 
-          </div>
 
-        </div>
+            <!-- MINI DETAILS -->
 
-
-
-        <!-- ===================================================
-             TARJETA FLOTANTE · PRIMERA FECHA
-        ==================================================== -->
-
-        <div
-          class="absolute -left-5 top-[21%] hidden min-w-[205px] rounded-2xl border border-white/10 bg-[#0b0b0b]/90 p-4 shadow-2xl backdrop-blur-xl transition duration-500 group-hover:-translate-x-1 sm:block lg:-left-12"
-        >
-
-          <span
-            class="text-[8px] font-semibold uppercase tracking-[0.22em] text-[#d4af37]"
-          >
-            Primera fecha
-          </span>
-
-
-          <div
-            class="mt-2 flex items-end gap-3"
-          >
-
-            <strong
-              class="text-3xl font-semibold tracking-[-0.04em]"
+            <div
+              class="mt-7 grid grid-cols-2 overflow-hidden rounded-2xl border border-white/10 bg-black/30 backdrop-blur-xl"
             >
-              26
-            </strong>
 
-            <div class="pb-1">
+              <div class="p-4">
 
-              <strong
-                class="block text-xs font-medium text-white/75"
-              >
-                Septiembre
-              </strong>
+                <span
+                  class="block text-[8px] font-semibold uppercase tracking-[0.2em] text-white/30"
+                >
+                  Inducción
+                </span>
 
-              <span
-                class="text-[9px] text-white/30"
-              >
-                Inducción + diagnóstico
-              </span>
+                <strong
+                  class="mt-1 block text-sm font-semibold text-white"
+                >
+                  26 septiembre
+                </strong>
+
+              </div>
+
+
+              <div class="border-l border-white/10 p-4">
+
+                <span
+                  class="block text-[8px] font-semibold uppercase tracking-[0.2em] text-white/30"
+                >
+                  Inicio oficial
+                </span>
+
+                <strong
+                  class="mt-1 block text-sm font-semibold text-[#d4af37]"
+                >
+                  03 octubre
+                </strong>
+
+              </div>
 
             </div>
 
@@ -400,48 +414,56 @@
         </div>
 
 
-
-        <!-- ===================================================
-             TARJETA FLOTANTE · INICIO
-        ==================================================== -->
+        <!-- =================================================
+             FLOATING · HORARIO
+        ================================================== -->
 
         <div
-          class="absolute -right-3 bottom-[21%] hidden min-w-[215px] rounded-2xl border border-[#d4af37]/20 bg-[#0b0b0b]/90 p-4 shadow-2xl backdrop-blur-xl transition duration-500 group-hover:translate-x-1 sm:block lg:-right-9"
+          class="absolute -bottom-6 -left-4 hidden rounded-2xl border border-white/10 bg-[#0c0c0c]/95 px-5 py-4 shadow-2xl backdrop-blur-xl transition duration-500 group-hover:-translate-y-1 sm:block lg:-left-10"
         >
 
           <span
-            class="text-[8px] font-semibold uppercase tracking-[0.22em] text-[#d4af37]"
+            class="block text-[8px] font-semibold uppercase tracking-[0.22em] text-[#d4af37]"
           >
-            Inicio oficial
+            Sesión semanal
           </span>
 
-
-          <div
-            class="mt-2 flex items-end gap-3"
+          <strong
+            class="mt-2 block text-sm font-semibold text-white"
           >
+            Sábados · 10:00 — 13:00
+          </strong>
+
+          <span
+            class="mt-1 block text-[9px] text-white/30"
+          >
+            Modalidad presencial
+          </span>
+
+        </div>
+
+
+        <!-- =================================================
+             FLOATING · CICLO
+        ================================================== -->
+
+        <div
+          class="absolute -right-3 top-[18%] hidden h-24 w-24 items-center justify-center rounded-full border border-[#d4af37]/25 bg-[#0b0b0b]/90 text-center shadow-2xl backdrop-blur-xl sm:flex lg:-right-8"
+        >
+
+          <div>
 
             <strong
-              class="text-3xl font-semibold tracking-[-0.04em]"
+              class="block text-xl font-semibold tracking-[-0.04em] text-[#d4af37]"
             >
-              03
+              26–27
             </strong>
 
-
-            <div class="pb-1">
-
-              <strong
-                class="block text-xs font-medium text-white/75"
-              >
-                Octubre
-              </strong>
-
-              <span
-                class="text-[9px] text-white/30"
-              >
-                Comienzan las clases
-              </span>
-
-            </div>
+            <span
+              class="mt-1 block text-[7px] font-semibold uppercase tracking-[0.18em] text-white/30"
+            >
+              Ciclo
+            </span>
 
           </div>
 
@@ -454,125 +476,41 @@
   </div>
 
 
-
   <!-- =========================================================
-       BARRA INFERIOR
+       BOTTOM STRIP
   ========================================================== -->
 
   <div
-    class="relative mx-auto mt-10 max-w-7xl overflow-hidden rounded-[1.6rem] border border-white/[0.08] bg-white/[0.018] lg:mt-4"
+    class="relative mx-auto mt-16 max-w-7xl border-t border-white/[0.07] pt-5 lg:mt-8"
   >
 
     <div
-      class="grid sm:grid-cols-3"
+      class="flex flex-col gap-4 text-[8px] font-semibold uppercase tracking-[0.22em] text-white/20 sm:flex-row sm:items-center sm:justify-between"
     >
 
-      <!-- FECHA -->
-      <div
-        class="p-5 sm:p-6"
-      >
+      <span>
+        Centro Educativo AD · Huixquilucan
+      </span>
 
-        <span
-          class="text-[8px] font-semibold uppercase tracking-[0.2em] text-[#d4af37]"
-        >
-          Inducción
+      <div class="flex flex-wrap items-center gap-5">
+
+        <span class="text-white/25">
+          Presencial
         </span>
 
-        <strong
-          class="mt-2 block text-sm font-semibold text-white"
-        >
-          26 de septiembre
-        </strong>
+        <span class="h-1 w-1 rounded-full bg-[#d4af37]"></span>
 
-        <span
-          class="mt-1 block text-[10px] text-white/30"
-        >
-          Presentación + diagnóstico
+        <span>
+          Sábados
+        </span>
+
+        <span class="h-1 w-1 rounded-full bg-[#d4af37]"></span>
+
+        <span>
+          Ciclo 2026–2027
         </span>
 
       </div>
-
-
-
-      <!-- INICIO -->
-      <div
-        class="border-y border-white/[0.07] p-5 sm:border-x sm:border-y-0 sm:p-6"
-      >
-
-        <span
-          class="text-[8px] font-semibold uppercase tracking-[0.2em] text-[#d4af37]"
-        >
-          Inicio
-        </span>
-
-        <strong
-          class="mt-2 block text-sm font-semibold text-white"
-        >
-          3 de octubre
-        </strong>
-
-        <span
-          class="mt-1 block text-[10px] text-white/30"
-        >
-          Ciclo ECOEMS 2026–2027
-        </span>
-
-      </div>
-
-
-
-      <!-- HORARIO -->
-      <div
-        class="p-5 sm:p-6"
-      >
-
-        <span
-          class="text-[8px] font-semibold uppercase tracking-[0.2em] text-[#d4af37]"
-        >
-          Horario
-        </span>
-
-        <strong
-          class="mt-2 block text-sm font-semibold text-white"
-        >
-          Sábados · 10:00 — 13:00
-        </strong>
-
-        <span
-          class="mt-1 block text-[10px] text-white/30"
-        >
-          Sesión presencial
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- =========================================================
-       SCROLL
-  ========================================================== -->
-
-  <div
-    class="pointer-events-none absolute bottom-5 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 xl:flex"
-    aria-hidden="true"
-  >
-
-    <span
-      class="text-[7px] font-medium uppercase tracking-[0.3em] text-white/15"
-    >
-      Conoce el programa
-    </span>
-
-    <div
-      class="relative h-8 w-px overflow-hidden bg-white/10"
-    >
-
-      <span
-        class="absolute left-0 top-0 h-3 w-px motion-safe:animate-[hero-scroll_2s_ease-in-out_infinite] bg-[#d4af37]"
-      ></span>
 
     </div>
 
@@ -581,8 +519,6 @@
 </section>
 
 <!-- ============================ [FIN HERO ECOEMS] ============================ -->
-
-
 <!-- =========================================================================
      02 · EL PROGRAMA
 ============================================================================ -->
@@ -1419,30 +1355,34 @@
 
 </section>
 
-
-
 <!-- =========================================================================
-     05 · FLYER / PRÓXIMO CICLO
+     05 · INSCRIPCIÓN / PRÓXIMO CICLO
 ============================================================================ -->
 
 <section
   class="relative overflow-hidden bg-[#e9e6df] px-5 py-20 text-[#111] sm:px-8 lg:px-12 lg:py-28"
 >
 
-  <!-- ambient -->
+  <!-- AMBIENTE -->
   <div
-    class="pointer-events-none absolute -left-36 bottom-0 h-[430px] w-[430px] rounded-full bg-[#d4af37]/10 blur-[160px]"
+    class="pointer-events-none absolute -left-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[#d4af37]/10 blur-[170px]"
   ></div>
 
+  <span
+    class="pointer-events-none absolute -right-8 top-8 hidden text-[220px] font-semibold leading-none tracking-[-0.09em] text-black/[0.025] xl:block"
+    aria-hidden="true"
+  >
+    26
+  </span>
+
 
   <div
-    class="relative mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.78fr_1.22fr] lg:items-center lg:gap-20"
+    class="relative mx-auto grid max-w-7xl gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-24"
   >
 
-
-    <!-- =========================================================
-         INFORMATION
-    ========================================================== -->
+    <!-- =====================================================
+         INFORMACIÓN
+    ====================================================== -->
 
     <div class="reveal">
 
@@ -1453,39 +1393,42 @@
         <span
           class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#87691a]"
         >
-          04 / PRÓXIMO CICLO
+          04 / INSCRIPCIONES
         </span>
 
       </div>
 
 
       <h2
-        class="mt-6 text-5xl font-semibold leading-[0.98] tracking-[-0.05em] sm:text-6xl"
+        class="mt-6 max-w-xl text-5xl font-semibold leading-[0.96] tracking-[-0.055em] sm:text-6xl lg:text-7xl"
       >
-        ECOEMS
+        Da el siguiente
+
         <span class="block text-black/30">
-          2026–2027
+          paso.
         </span>
       </h2>
 
 
       <p
-        class="mt-6 max-w-lg text-sm leading-7 text-black/50"
+        class="mt-7 max-w-lg text-sm leading-7 text-black/50 sm:text-base"
       >
-        Consulta la información principal
-        y comunícate con nosotros si deseas
-        reservar un lugar o resolver alguna duda.
+        Si ya conoces el programa y deseas formar parte del ciclo
+        ECOEMS 2026–2027, puedes comenzar tu proceso de inscripción
+        directamente desde nuestro formulario.
       </p>
 
 
+      <!-- =====================================================
+           FECHAS
+      ====================================================== -->
 
-      <!-- DETAILS -->
-      <div
-        class="mt-9 border-y border-black/10"
-      >
+      <div class="mt-10 overflow-hidden rounded-[1.8rem] border border-black/10">
+
+        <!-- INDUCCIÓN -->
 
         <div
-          class="grid grid-cols-[115px_1fr] gap-5 border-b border-black/10 py-5"
+          class="grid grid-cols-[90px_1fr] items-center gap-5 border-b border-black/10 p-5 sm:grid-cols-[120px_1fr] sm:p-6"
         >
 
           <span
@@ -1496,11 +1439,11 @@
 
           <div>
 
-            <strong class="block">
+            <strong class="block text-base">
               26 de septiembre
             </strong>
 
-            <span class="mt-1 block text-xs text-black/35">
+            <span class="mt-1 block text-xs text-black/40">
               Presentación y diagnóstico inicial
             </span>
 
@@ -1509,8 +1452,10 @@
         </div>
 
 
+        <!-- INICIO -->
+
         <div
-          class="grid grid-cols-[115px_1fr] gap-5 border-b border-black/10 py-5"
+          class="grid grid-cols-[90px_1fr] items-center gap-5 border-b border-black/10 p-5 sm:grid-cols-[120px_1fr] sm:p-6"
         >
 
           <span
@@ -1521,12 +1466,12 @@
 
           <div>
 
-            <strong class="block">
-              3 de octubre
+            <strong class="block text-base">
+              03 de octubre
             </strong>
 
-            <span class="mt-1 block text-xs text-black/35">
-              Comienzo oficial de clases
+            <span class="mt-1 block text-xs text-black/40">
+              Inicio oficial del ciclo
             </span>
 
           </div>
@@ -1534,8 +1479,10 @@
         </div>
 
 
+        <!-- HORARIO -->
+
         <div
-          class="grid grid-cols-[115px_1fr] gap-5 py-5"
+          class="grid grid-cols-[90px_1fr] items-center gap-5 p-5 sm:grid-cols-[120px_1fr] sm:p-6"
         >
 
           <span
@@ -1546,12 +1493,12 @@
 
           <div>
 
-            <strong class="block">
+            <strong class="block text-base">
               Sábados · 10:00 — 13:00
             </strong>
 
-            <span class="mt-1 block text-xs text-black/35">
-              Sesión presencial
+            <span class="mt-1 block text-xs text-black/40">
+              Modalidad presencial
             </span>
 
           </div>
@@ -1561,74 +1508,148 @@
       </div>
 
 
+      <!-- =====================================================
+           ACTIONS
+      ====================================================== -->
 
-      <!-- CTA -->
-      <a
-        href="https://wa.me/525588357806?text=Hola%20Centro%20Educativo%20AD.%0A%0AMe%20gustaría%20recibir%20información%20sobre%20ECOEMS%202026-2027.%0A%0ANombre%20del%20estudiante%3A%0AEdad%3A"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="group mt-8 inline-flex items-center gap-5 border-b border-[#896a18]/40 pb-2 text-sm font-semibold text-[#705515] transition hover:border-[#896a18]"
-      >
+      <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
 
-        Solicitar información
+        <!-- INSCRIPCIÓN -->
+
+        <a
+          href="https://forms.gle/FCtpCZhHXxbjRdPo7"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group inline-flex items-center justify-between gap-9 rounded-full bg-[#111] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_18px_50px_rgba(0,0,0,0.12)] transition duration-300 hover:scale-[1.02] hover:bg-black"
+        >
+
+          <span>
+            Inscribirme al ciclo
+          </span>
+
+          <span
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#d4af37] text-black transition duration-300 group-hover:translate-x-1"
+            aria-hidden="true"
+          >
+            ↗
+          </span>
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+          href="https://wa.me/525588357806?text=Hola%20Centro%20Educativo%20AD.%0A%0ATengo%20algunas%20dudas%20sobre%20el%20programa%20ECOEMS%202026-2027."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group inline-flex items-center gap-4 rounded-full border border-black/10 px-6 py-3.5 text-sm font-medium text-black/55 transition duration-300 hover:border-black/25 hover:bg-black/[0.03] hover:text-black"
+        >
+
+          Tengo dudas
+
+          <span
+            class="transition duration-300 group-hover:translate-x-1"
+            aria-hidden="true"
+          >
+            →
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <!-- MICROCOPY -->
+
+      <div class="mt-6 flex items-start gap-3">
 
         <span
-          class="transition duration-300 group-hover:translate-x-1"
-        >
-          →
-        </span>
+          class="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#96751d]"
+        ></span>
 
-      </a>
+        <p class="max-w-md text-[11px] leading-5 text-black/35">
+          El formulario recopila la información necesaria para iniciar
+          el proceso de registro del estudiante.
+        </p>
+
+      </div>
 
     </div>
 
 
 
-    <!-- =========================================================
-         FLYER IMG11
-    ========================================================== -->
+    <!-- =====================================================
+         FLYER
+    ====================================================== -->
 
     <div class="reveal reveal--right">
 
-      <div
-        class="group relative mx-auto max-w-[620px]"
-      >
+      <div class="group relative mx-auto max-w-[620px]">
 
-        <!-- back frame -->
+        <!-- FRAME -->
+
         <div
-          class="absolute -inset-3 rounded-[2.2rem] border border-[#997821]/15 transition duration-700 group-hover:-inset-4"
+          class="absolute -inset-3 rounded-[2.5rem] border border-[#997821]/15 transition duration-700 group-hover:-inset-4 group-hover:border-[#997821]/25"
         ></div>
 
 
+        <!-- IMAGE -->
+
         <div
-          class="relative overflow-hidden rounded-[2rem] bg-[#111] shadow-[0_35px_100px_rgba(0,0,0,0.20)]"
+          class="relative overflow-hidden rounded-[2.2rem] bg-[#111] shadow-[0_40px_110px_rgba(0,0,0,0.22)]"
         >
 
           <img
             src="/images/img11.jpg"
-            alt="Flyer informativo ECOEMS 2026–2027 de Centro Educativo AD"
+            alt="Información del ciclo ECOEMS 2026–2027 de Centro Educativo AD"
             loading="lazy"
             decoding="async"
-            class="block h-auto w-full transition duration-1000 ease-out group-hover:scale-[1.015]"
+            class="block h-auto w-full transition duration-1000 ease-out group-hover:scale-[1.018]"
           />
+
+          <div
+            class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10"
+          ></div>
 
         </div>
 
 
+        <!-- BADGE -->
 
-        <!-- label -->
         <div
-          class="absolute -bottom-5 left-5 flex items-center gap-3 rounded-full border border-white/10 bg-[#111] px-5 py-3 shadow-xl"
+          class="absolute -bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl border border-white/10 bg-[#0b0b0b]/95 px-5 py-4 shadow-2xl backdrop-blur-xl sm:left-8 sm:right-auto sm:min-w-[270px]"
         >
 
-          <span
-            class="h-1.5 w-1.5 rounded-full bg-[#d4af37]"
-          ></span>
+          <div>
+
+            <span
+              class="block text-[8px] font-semibold uppercase tracking-[0.22em] text-[#d4af37]"
+            >
+              ECOEMS 2026–2027
+            </span>
+
+            <strong
+              class="mt-1 block text-sm font-semibold text-white"
+            >
+              Inscripciones abiertas
+            </strong>
+
+          </div>
+
 
           <span
-            class="text-[8px] font-semibold uppercase tracking-[0.2em] text-[#d4af37]"
+            class="relative ml-8 flex h-2 w-2"
           >
-            Información del ciclo
+
+            <span
+              class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#d4af37] opacity-30"
+            ></span>
+
+            <span
+              class="relative inline-flex h-2 w-2 rounded-full bg-[#d4af37]"
+            ></span>
+
           </span>
 
         </div>
@@ -1640,7 +1661,6 @@
   </div>
 
 </section>
-
 
 
 <!-- =========================================================================
@@ -1715,14 +1735,12 @@
 
     <!-- CTA -->
     <a
-      href="https://wa.me/525588357806?text=Hola%20Centro%20Educativo%20AD.%0A%0AMe%20interesa%20ECOEMS%202026-2027%20y%20quiero%20reservar%20un%20lugar.%0A%0ANombre%20del%20estudiante%3A%0AEdad%3A"
-      target="_blank"
-      rel="noopener noreferrer"
+      href="https://forms.gle/FCtpCZhHXxbjRdPo7"
       class="group mx-auto mt-9 inline-flex items-center gap-8 rounded-full bg-[#d4af37] px-7 py-4 text-sm font-semibold text-black shadow-[0_20px_70px_rgba(212,175,55,0.16)] transition duration-300 hover:scale-[1.025] hover:bg-[#e5c657] hover:shadow-[0_25px_85px_rgba(212,175,55,0.23)]"
     >
 
       <span>
-        Reservar lugar
+        Inscríbete ahora
       </span>
 
       <span

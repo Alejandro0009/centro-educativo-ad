@@ -1,33 +1,139 @@
 import { Routes } from '@angular/router';
-
-import { PublicLayout } from './layouts/public-layout/public-layout';
-import { Home } from './features/public/home/home';
+import { authGuard } from './features/staff/auth/auth-guard';
 
 export const routes: Routes = [
 
+  // =========================================================
+  // ÁREA INTERNA · EMPLEADOS
+  // =========================================================
+
   {
-    path: '',
-    component: PublicLayout,
+    path: 'empleados',
 
     children: [
 
-      // HOME
+      // -------------------------------------------------------
+      // LOGIN
+      // /empleados/login
+      // -------------------------------------------------------
+
       {
-        path: '',
-        component: Home
+        path: 'login',
+
+        loadComponent: () =>
+          import('./features/staff/auth/login/login')
+            .then(m => m.Login)
       },
 
+
+      // -------------------------------------------------------
+      // HOME INTERNO
+      // /empleados/home
+      // -------------------------------------------------------
+
+      {
+        path: 'home',
+
+        canActivate: [authGuard],
+
+        loadComponent: () =>
+          import('./features/staff/home/home')
+            .then(m => m.Home)
+      },
+
+
+      // -------------------------------------------------------
+      // /empleados → /empleados/login
+      // -------------------------------------------------------
+
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'login'
+      }
+
+    ]
+  },
+
+
+  // =========================================================
+  // SITIO PÚBLICO
+  // =========================================================
+
+  {
+    path: '',
+
+    loadComponent: () =>
+      import('./layouts/public-layout/public-layout')
+        .then(m => m.PublicLayout),
+
+    children: [
+
+      // -------------------------------------------------------
+      // HOME
+      // /
+      // -------------------------------------------------------
+
+      {
+        path: '',
+        pathMatch: 'full',
+
+        loadComponent: () =>
+          import('./features/public/home/home')
+            .then(m => m.Home)
+      },
+
+
+      // -------------------------------------------------------
       // ECOEMS
+      // /ecoems
+      // -------------------------------------------------------
+
       {
         path: 'ecoems',
+
         loadComponent: () =>
           import('./features/public/ecoems/ecoems')
             .then(m => m.Ecoems)
       },
 
+
+      // -------------------------------------------------------
+      // UNIVERSIDAD
+      // /universidad
+      // -------------------------------------------------------
+
+      {
+        path: 'universidad',
+
+        loadComponent: () =>
+          import('./features/public/universidad/universidad')
+            .then(m => m.Universidad)
+      },
+
+
+      // -------------------------------------------------------
+      // INGLÉS
+      // /ingles
+      // -------------------------------------------------------
+
+      {
+        path: 'ingles',
+
+        loadComponent: () =>
+          import('./features/public/ingles/ingles')
+            .then(m => m.Ingles)
+      },
+
+
+      // -------------------------------------------------------
       // NOTICIAS
+      // /noticias
+      // -------------------------------------------------------
+
       {
         path: 'noticias',
+
         loadComponent: () =>
           import('./features/public/news/news')
             .then(m => m.News)
@@ -37,7 +143,10 @@ export const routes: Routes = [
   },
 
 
+  // =========================================================
   // CUALQUIER RUTA NO EXISTENTE
+  // =========================================================
+
   {
     path: '**',
     redirectTo: ''

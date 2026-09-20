@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #080808;
+}
+
+::selection {
+  background: #d4af37;
+  color: #080808;
+}
