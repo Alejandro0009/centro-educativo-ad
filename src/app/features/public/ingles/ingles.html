@@ -1,229 +1,71 @@
-<main
-  class="relative flex min-h-[100svh] items-center overflow-hidden bg-[#080808] px-5 py-24 text-white sm:px-8 lg:px-12"
->
+<!-- 01 · PORTADA -->
+<section class="relative isolate overflow-hidden bg-[#080808] px-5 pb-20 pt-32 text-white sm:px-8 sm:pt-36 lg:px-12 lg:pb-28 lg:pt-40">
+  <div class="pointer-events-none absolute -left-48 top-20 h-[550px] w-[550px] rounded-full bg-[#d4af37]/[0.08] blur-[180px]" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -right-48 bottom-0 h-[550px] w-[550px] rounded-full bg-[#d4af37]/[0.05] blur-[190px]" aria-hidden="true"></div>
+  <span class="pointer-events-none absolute -right-8 top-20 hidden select-none text-[clamp(10rem,22vw,22rem)] font-semibold leading-none tracking-[-0.1em] text-white/[0.018] lg:block" aria-hidden="true">EN</span>
 
-  <!-- =========================================================
-       AMBIENTE
-  ========================================================== -->
-
-  <div
-    class="pointer-events-none absolute -left-40 bottom-10 h-[420px] w-[420px] rounded-full bg-[#d4af37]/[0.07] blur-[150px]"
-  ></div>
-
-  <div
-    class="pointer-events-none absolute -right-40 top-0 h-[500px] w-[500px] rounded-full bg-white/[0.025] blur-[170px]"
-  ></div>
-
-
-  <div
-    class="pointer-events-none absolute right-[-2rem] top-1/2 hidden -translate-y-1/2 select-none text-[23rem] font-black leading-none tracking-[-0.09em] text-white/[0.015] lg:block"
-  >
-    EN
-  </div>
-
-
-
-  <!-- =========================================================
-       CONTENIDO
-  ========================================================== -->
-
-  <div class="relative mx-auto w-full max-w-6xl">
-
-    <div
-      class="grid items-end gap-14 lg:grid-cols-[1fr_0.55fr]"
-    >
-
-
-      <!-- =====================================================
-           PRINCIPAL
-      ====================================================== -->
-
-      <div>
-
-        <div
-          class="inline-flex items-center gap-3 rounded-full border border-[#d4af37]/25 bg-[#d4af37]/[0.05] px-4 py-2"
-        >
-
-          <span
-            class="h-1.5 w-1.5 rounded-full bg-[#d4af37]"
-          ></span>
-
-          <span
-            class="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#d4af37]"
-          >
-            Coming soon
-          </span>
-
-        </div>
-
-
-        <p
-          class="mt-8 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/30"
-        >
-          Centro Educativo AD · Inglés
-        </p>
-
-
-        <h1
-          class="mt-5 max-w-4xl text-[3.4rem] font-semibold leading-[0.92] tracking-[-0.065em] sm:text-6xl lg:text-8xl"
-        >
-          Something new
-
-          <span
-            class="block text-[#d4af37]"
-          >
-            is coming.
-          </span>
-
-        </h1>
-
-
-        <p
-          class="mt-8 max-w-xl text-sm leading-7 text-white/45 sm:text-base"
-        >
-          Nuestra nueva sección de Inglés se encuentra
-          actualmente en desarrollo.
-        </p>
-
-        <p
-          class="mt-2 max-w-xl text-sm leading-7 text-white/30"
-        >
-          Muy pronto encontrarás aquí toda la información.
-        </p>
-
-
-        <div class="mt-10">
-
-          <a
-            routerLink="/"
-            class="group inline-flex min-h-[52px] items-center gap-5 rounded-full bg-[#d4af37] px-6 text-sm font-semibold text-black transition duration-300 hover:bg-[#e2bf4c]"
-          >
-
-            Volver al inicio
-
-            <span
-              class="transition-transform duration-300 group-hover:-translate-x-1"
-              aria-hidden="true"
-            >
-              ←
-            </span>
-
-          </a>
-
-        </div>
-
+  <div class="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,.95fr)] lg:gap-16 xl:gap-20">
+    <div class="min-w-0">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="inline-flex items-center gap-3 rounded-full border border-[#d4af37]/25 bg-[#d4af37]/[0.06] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#d4af37]"><span class="h-2 w-2 rounded-full bg-[#d4af37]"></span>Programa de Inglés</span>
+        <span class="text-[10px] uppercase tracking-[0.2em] text-white/35">Centro Educativo AD</span>
       </div>
-
-
-
-      <!-- =====================================================
-           STATUS CARD
-      ====================================================== -->
-
-      <div
-        class="relative overflow-hidden rounded-[1.7rem] border border-white/10 bg-white/[0.025] p-6 sm:p-8"
-      >
-
-        <div
-          class="absolute right-[-2rem] top-[-3rem] text-[9rem] font-bold tracking-[-0.08em] text-white/[0.025]"
-        >
-          EN
-        </div>
-
-
-        <div class="relative">
-
-          <span
-            class="text-[8px] font-semibold uppercase tracking-[0.22em] text-[#d4af37]"
-          >
-            Work in progress
-          </span>
-
-
-          <div
-            class="mt-8 h-px w-full bg-white/10"
-          ></div>
-
-
-          <div class="mt-8">
-
-            <span
-              class="block text-xs text-white/30"
-            >
-              Estado de la sección
-            </span>
-
-
-            <strong
-              class="mt-2 block text-2xl font-semibold tracking-[-0.04em]"
-            >
-              En desarrollo
-            </strong>
-
-          </div>
-
-
-          <div
-            class="mt-8 flex items-center gap-2"
-          >
-
-            <span
-              class="h-1.5 flex-1 rounded-full bg-[#d4af37]"
-            ></span>
-
-            <span
-              class="h-1.5 flex-1 rounded-full bg-[#d4af37]/50"
-            ></span>
-
-            <span
-              class="h-1.5 flex-1 rounded-full bg-white/10"
-            ></span>
-
-            <span
-              class="h-1.5 flex-1 rounded-full bg-white/10"
-            ></span>
-
-          </div>
-
-
-          <p
-            class="mt-6 text-xs leading-6 text-white/30"
-          >
-            Estamos preparando una nueva experiencia dentro
-            del sitio de Centro Educativo AD.
-          </p>
-
-        </div>
-
+      <p class="mt-9 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/45">Aprende · Practica · Avanza</p>
+      <h1 class="mt-5 max-w-3xl text-[clamp(3rem,7vw,6.5rem)] font-semibold leading-[0.94] tracking-[-0.065em]">El inglés se <span class="block text-white/45">aprende</span><span class="block bg-gradient-to-r from-[#d4af37] via-[#f5df91] to-[#aa8426] bg-clip-text text-transparent">usándolo.</span></h1>
+      <p class="mt-8 max-w-xl text-sm leading-7 text-white/60 sm:text-base sm:leading-8">Desde tus primeras palabras hasta conversaciones y lecturas de mayor nivel. En Centro Educativo AD adaptamos la práctica a tu punto de partida y a tus objetivos.</p>
+      <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <a href="https://forms.gle/FCtpCZhHXxbjRdPo7" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-14 w-full items-center justify-center gap-5 rounded-full bg-[#d4af37] px-6 text-center text-sm font-semibold text-black transition hover:bg-[#e8c960] sm:w-auto">Inscríbete ahora <span aria-hidden="true">↗</span></a>
+        <a href="#modalidades" class="inline-flex min-h-14 w-full items-center justify-center gap-5 rounded-full border border-white/15 px-6 text-center text-sm font-medium text-white/80 transition hover:border-white/35 hover:text-white sm:w-auto">Explorar modalidades <span aria-hidden="true">↓</span></a>
       </div>
-
+      <div class="mt-11 grid grid-cols-3 border-y border-white/10">
+        <div class="py-5 pr-2"><strong class="block text-xl font-semibold sm:text-2xl">Intro</strong><span class="mt-1 block text-[9px] uppercase tracking-[0.12em] text-white/45">Primeros pasos</span></div>
+        <div class="border-x border-white/10 px-3 py-5 sm:px-5"><strong class="block text-xl font-semibold text-[#d4af37] sm:text-2xl">A1–A2</strong><span class="mt-1 block text-[9px] uppercase tracking-[0.12em] text-white/45">Bases</span></div>
+        <div class="py-5 pl-3 sm:pl-5"><strong class="block text-xl font-semibold sm:text-2xl">B1–B2</strong><span class="mt-1 block text-[9px] uppercase tracking-[0.12em] text-white/45">Profundización</span></div>
+      </div>
     </div>
 
-
-
-    <!-- =========================================================
-         FOOTER
-    ========================================================== -->
-
-    <div
-      class="mt-20 flex flex-col gap-3 border-t border-white/[0.07] pt-6 sm:flex-row sm:items-center sm:justify-between"
-    >
-
-      <span
-        class="text-[8px] uppercase tracking-[0.2em] text-white/20"
-      >
-        Centro Educativo AD
-      </span>
-
-
-      <span
-        class="text-[8px] uppercase tracking-[0.2em] text-white/20"
-      >
-        Learn · Advance · Achieve
-      </span>
-
+    <!-- La información de horario permanece dentro de la tarjeta: no se encimará. -->
+    <div class="min-w-0 rounded-[2rem] border border-[#d4af37]/15 p-2 sm:p-3">
+      <div class="flex min-h-[470px] flex-col overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#111] p-6 shadow-[0_40px_120px_rgba(0,0,0,0.4)] sm:min-h-[560px] sm:p-8 lg:min-h-[610px]">
+        <div class="flex flex-wrap items-center justify-between gap-3"><span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#d4af37]">English at AD</span><span class="text-[10px] uppercase tracking-[0.15em] text-white/40">Tu camino, tu ritmo</span></div>
+        <div class="my-auto py-16"><span class="text-[10px] uppercase tracking-[0.3em] text-white/45">Start here</span><p class="mt-4 text-[clamp(3.5rem,7vw,6rem)] font-semibold leading-none tracking-[-0.07em]">Hello<span class="text-[#d4af37]">.</span></p><p class="mt-6 max-w-sm text-sm leading-7 text-white/55">Aprende a comunicar tus ideas con actividades que avanzan contigo, desde lo esencial hasta contenidos más exigentes.</p></div>
+        <div class="grid gap-5 border-t border-white/10 pt-6 sm:grid-cols-2"><div><span class="block text-[9px] uppercase tracking-[0.18em] text-white/40">Clases</span><strong class="mt-2 block text-sm">Grupales y personalizadas</strong></div><div class="sm:border-l sm:border-white/10 sm:pl-5"><span class="block text-[9px] uppercase tracking-[0.18em] text-white/40">Disponibilidad</span><strong class="mt-2 block text-sm text-[#d4af37]">Entre semana y sábados</strong></div></div>
+      </div>
     </div>
-
   </div>
+  <div class="relative mx-auto mt-20 flex max-w-7xl flex-col gap-2 border-t border-white/10 pt-5 text-[9px] uppercase tracking-[0.18em] text-white/40 sm:flex-row sm:justify-between"><span>Centro Educativo AD · Huixquilucan</span><span>Inglés · Diferentes formas de aprender</span></div>
+</section>
 
-</main>
+<!-- 02 · EL PROGRAMA -->
+<section id="programa" class="bg-[#e9e6df] px-5 py-20 text-[#111] sm:px-8 lg:px-12 lg:py-28">
+  <div class="mx-auto max-w-7xl">
+    <div class="flex flex-wrap items-center justify-between gap-3 border-b border-black/10 pb-6"><span class="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#87691a]">01 / El programa</span><span class="text-[9px] uppercase tracking-[0.15em] text-black/45">Inglés · Centro Educativo AD</span></div>
+    <div class="mt-14 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,.85fr)] lg:gap-20">
+      <div class="min-w-0"><h2 class="text-[clamp(2.8rem,5.5vw,5rem)] font-semibold leading-[0.98] tracking-[-0.06em]">Un idioma para <span class="block text-black/40">hacerlo tuyo.</span></h2><p class="mt-7 max-w-xl text-sm leading-7 text-black/65 sm:text-base">Trabajamos comprensión auditiva, lectura, escritura y expresión oral. Explicamos cada tema, lo practicamos en clase y lo retomamos hasta que el estudiante pueda usarlo con mayor seguridad.</p><p class="mt-4 max-w-xl text-sm leading-7 text-black/60">Puedes iniciar desde cero, reforzar lo aprendido en la escuela o trabajar contenidos más avanzados en clases personalizadas.</p></div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1"><article class="rounded-[1.6rem] border border-black/10 bg-white/45 p-6"><span class="text-[10px] font-semibold text-[#87691a]">01 / COMPRENDE</span><h3 class="mt-5 text-xl font-semibold">Escucha y lectura</h3><p class="mt-3 text-sm leading-6 text-black/60">Identifica ideas, vocabulario y detalles en audios y textos adecuados a tu nivel.</p></article><article class="rounded-[1.6rem] border border-black/10 bg-white/45 p-6"><span class="text-[10px] font-semibold text-[#87691a]">02 / EXPRÉSATE</span><h3 class="mt-5 text-xl font-semibold">Habla y escritura</h3><p class="mt-3 text-sm leading-6 text-black/60">Construye respuestas, describe situaciones y comunica tus propias ideas.</p></article></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · NIVELES Y PROGRESIÓN -->
+<section class="bg-[#0b0b0b] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28">
+  <div class="mx-auto max-w-7xl"><div class="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-6"><span class="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#d4af37]">02 / Tu recorrido</span><span class="text-[9px] uppercase tracking-[0.15em] text-white/40">El nivel se ajusta al estudiante</span></div>
+    <div class="mt-14 grid gap-10 lg:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] lg:gap-14"><div class="min-w-0"><h2 class="text-[clamp(2.8rem,5.5vw,4.8rem)] font-semibold leading-[0.98] tracking-[-0.06em]">Empieza donde <span class="block text-white/40">te encuentras.</span></h2><p class="mt-7 max-w-md text-sm leading-7 text-white/55">El recorrido no es igual para todos. Revisamos las bases y elegimos actividades acordes con el nivel y los objetivos de cada alumno.</p></div>
+      <div class="grid gap-4 sm:grid-cols-2"><article class="rounded-[1.6rem] border border-white/10 bg-white/[0.035] p-6"><span class="text-[10px] font-semibold text-[#d4af37]">INTRO</span><h3 class="mt-8 text-2xl font-semibold">Desde el inicio</h3><p class="mt-4 text-sm leading-6 text-white/55">Saludos, vocabulario cotidiano, pronunciación y primeras oraciones.</p></article><article class="rounded-[1.6rem] border border-white/10 bg-white/[0.035] p-6"><span class="text-[10px] font-semibold text-[#d4af37]">A1–A2</span><h3 class="mt-8 text-2xl font-semibold">Construye tus bases</h3><p class="mt-4 text-sm leading-6 text-white/55">Preguntas, descripciones, experiencias y conversaciones sobre temas habituales.</p></article><article class="rounded-[1.6rem] border border-[#d4af37]/25 bg-[#d4af37]/[0.05] p-6 sm:col-span-2"><span class="text-[10px] font-semibold text-[#d4af37]">B1–B2 · CLASES PERSONALIZADAS</span><h3 class="mt-7 text-2xl font-semibold">Expresa ideas con más precisión</h3><p class="mt-4 max-w-2xl text-sm leading-6 text-white/60">Lecturas más extensas, argumentos, opiniones, situaciones hipotéticas y práctica de conversación. Seleccionamos gramática y materiales según las necesidades reales del estudiante, sin prometer un nivel por un número fijo de sesiones.</p></article></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · METODOLOGÍA -->
+<section class="bg-[#e9e6df] px-5 py-20 text-[#111] sm:px-8 lg:px-12 lg:py-28"><div class="mx-auto max-w-7xl"><div class="flex flex-wrap items-center justify-between gap-3 border-b border-black/10 pb-6"><span class="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#87691a]">03 / Cómo trabajamos</span><span class="text-[9px] uppercase tracking-[0.15em] text-black/45">Práctica y seguimiento</span></div><div class="mt-14 grid gap-10 lg:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] lg:gap-16"><div class="min-w-0"><h2 class="text-[clamp(2.8rem,5.5vw,4.8rem)] font-semibold leading-[0.98] tracking-[-0.06em]">Cada clase, <span class="block text-black/40">un avance.</span></h2><p class="mt-7 max-w-md text-sm leading-7 text-black/65">La explicación sirve para entender; la práctica constante ayuda a usar lo aprendido. Adaptamos los ejercicios al grupo o al estudiante.</p></div><div class="grid gap-4 sm:grid-cols-2"><article class="rounded-[1.5rem] border border-black/10 bg-white/45 p-6"><span class="text-[10px] font-semibold text-[#87691a]">01</span><h3 class="mt-8 text-xl font-semibold">Punto de partida</h3><p class="mt-3 text-sm leading-6 text-black/60">Identificamos conocimientos previos y objetivos.</p></article><article class="rounded-[1.5rem] border border-black/10 bg-white/45 p-6"><span class="text-[10px] font-semibold text-[#87691a]">02</span><h3 class="mt-8 text-xl font-semibold">Explicación</h3><p class="mt-3 text-sm leading-6 text-black/60">Presentamos estructuras y vocabulario con ejemplos claros.</p></article><article class="rounded-[1.5rem] border border-black/10 bg-white/45 p-6"><span class="text-[10px] font-semibold text-[#87691a]">03</span><h3 class="mt-8 text-xl font-semibold">Uso del idioma</h3><p class="mt-3 text-sm leading-6 text-black/60">Leemos, escuchamos, escribimos y practicamos respuestas.</p></article><article class="rounded-[1.5rem] border border-[#96761e]/25 bg-[#d4af37]/[0.08] p-6"><span class="text-[10px] font-semibold text-[#87691a]">04</span><h3 class="mt-8 text-xl font-semibold">Refuerzo</h3><p class="mt-3 text-sm leading-6 text-black/60">Retomamos dudas y asignamos práctica para continuar.</p></article></div></div></div></section>
+
+<!-- 05 · MODALIDADES -->
+<section id="modalidades" class="bg-[#101010] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28"><div class="mx-auto max-w-7xl"><div class="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-6"><span class="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#d4af37]">04 / Modalidades</span><span class="text-[9px] uppercase tracking-[0.15em] text-white/40">Elige cómo aprender</span></div><div class="mt-14 max-w-3xl"><h2 class="text-[clamp(2.8rem,5.5vw,5rem)] font-semibold leading-[0.98] tracking-[-0.06em]">Hay espacio para <span class="block text-white/40">distintas metas.</span></h2><p class="mt-7 text-sm leading-7 text-white/55 sm:text-base">El grupo sabatino es una opción para quienes buscan una rutina semanal. También ofrecemos clases personalizadas entre semana para trabajar objetivos y necesidades particulares.</p></div>
+  <div class="mt-11 grid gap-5 lg:grid-cols-2"><article class="flex min-w-0 flex-col rounded-[1.8rem] border border-[#d4af37]/25 bg-[#d4af37]/[0.045] p-6 sm:p-8"><span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#d4af37]">Grupo sabatino</span><h3 class="mt-5 text-3xl font-semibold tracking-[-0.04em]">Aprende en grupo</h3><p class="mt-4 text-sm leading-7 text-white/55">Orientado inicialmente a estudiantes de sexto de primaria y primero, segundo o tercero de secundaria. El nivel del grupo y la disponibilidad se confirman antes del registro.</p><dl class="mt-8 divide-y divide-white/10 border-y border-white/10 text-sm"><div class="flex flex-wrap justify-between gap-2 py-4"><dt class="text-white/50">Día y horario</dt><dd class="font-semibold">Sábados · 08:00–10:00</dd></div><div class="flex flex-wrap justify-between gap-2 py-4"><dt class="text-white/50">Modalidad</dt><dd class="font-semibold">Presencial</dd></div><div class="flex flex-wrap justify-between gap-2 py-4"><dt class="text-white/50">Costo</dt><dd class="font-semibold text-[#d4af37]">$85 MXN por sesión</dd></div></dl><a href="https://forms.gle/FCtpCZhHXxbjRdPo7" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#d4af37] px-5 text-center text-sm font-semibold text-black transition hover:bg-[#e8c960] sm:w-fit">Consultar inscripción <span aria-hidden="true">↗</span></a></article>
+  <article class="flex min-w-0 flex-col rounded-[1.8rem] border border-white/10 bg-white/[0.035] p-6 sm:p-8"><span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#d4af37]">Clases personalizadas</span><h3 class="mt-5 text-3xl font-semibold tracking-[-0.04em]">Un plan para ti</h3><p class="mt-4 text-sm leading-7 text-white/55">Para estudiantes que comienzan, necesitan apoyo escolar o desean practicar inglés de nivel más avanzado. Trabajamos según su ritmo, sus dudas y sus objetivos.</p><dl class="mt-8 divide-y divide-white/10 border-y border-white/10 text-sm"><div class="flex flex-wrap justify-between gap-2 py-4"><dt class="text-white/50">Días</dt><dd class="font-semibold">Lunes a viernes</dd></div><div class="flex flex-wrap justify-between gap-2 py-4"><dt class="text-white/50">Horario</dt><dd class="font-semibold">Según disponibilidad</dd></div><div class="flex flex-wrap justify-between gap-2 py-4"><dt class="text-white/50">Enfoque</dt><dd class="font-semibold">Objetivos individuales</dd></div></dl><a href="https://wa.me/525588357806?text=Hola%20Centro%20Educativo%20AD.%20Quisiera%20informacion%20sobre%20las%20clases%20personalizadas%20de%20Ingles." target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full border border-white/20 px-5 text-center text-sm font-semibold text-white transition hover:border-[#d4af37] hover:text-[#d4af37] sm:w-fit">Consultar horarios <span aria-hidden="true">↗</span></a></article></div></div></section>
+
+<!-- 06 · INSCRIPCIÓN Y CONTACTO -->
+<section id="inscripcion" class="bg-[#e9e6df] px-5 py-20 text-[#111] sm:px-8 lg:px-12 lg:py-28"><div class="mx-auto max-w-7xl"><div class="flex flex-wrap items-center justify-between gap-3 border-b border-black/10 pb-6"><span class="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#87691a]">05 / Siguiente paso</span><span class="text-[9px] uppercase tracking-[0.15em] text-black/45">Centro Educativo AD</span></div><div class="mt-14 grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,.85fr)] lg:gap-20"><div class="min-w-0"><h2 class="text-[clamp(2.8rem,5.5vw,5rem)] font-semibold leading-[0.98] tracking-[-0.06em]">Tu camino en inglés <span class="block text-black/40">comienza aquí.</span></h2><p class="mt-7 max-w-xl text-sm leading-7 text-black/65 sm:text-base">Cuéntanos si te interesa el grupo sabatino o una clase personalizada. Te ayudaremos a revisar el nivel, los horarios y la opción adecuada.</p><div class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap"><a href="https://forms.gle/FCtpCZhHXxbjRdPo7" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-14 w-full items-center justify-center gap-5 rounded-full bg-[#111] px-6 text-center text-sm font-semibold text-white transition hover:bg-black sm:w-auto">Inscríbete ahora <span class="text-[#d4af37]" aria-hidden="true">↗</span></a><a href="https://wa.me/525588357806?text=Hola%20Centro%20Educativo%20AD.%20Quisiera%20informacion%20sobre%20las%20clases%20de%20Ingles." target="_blank" rel="noopener noreferrer" class="inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-full border border-black/15 px-6 text-center text-sm font-medium text-black/75 transition hover:border-black/40 sm:w-auto">Tengo dudas <span aria-hidden="true">→</span></a></div></div><div class="rounded-[1.8rem] border border-black/10 bg-white/45 p-6 sm:p-8"><span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#87691a]">Inglés en Centro Educativo AD</span><h3 class="mt-6 text-3xl font-semibold tracking-[-0.04em]">Una página, distintas maneras de avanzar.</h3><p class="mt-5 text-sm leading-7 text-black/60">El grupo sabatino ofrece un horario fijo. Las sesiones personalizadas se organizan de acuerdo con la disponibilidad y el trabajo que necesita cada estudiante.</p><div class="mt-8 grid gap-3 sm:grid-cols-2"><div class="rounded-xl border border-black/10 p-4"><span class="block text-[9px] uppercase tracking-[0.16em] text-black/45">Grupo</span><strong class="mt-2 block text-sm">Sábados · 08:00–10:00</strong></div><div class="rounded-xl border border-black/10 p-4"><span class="block text-[9px] uppercase tracking-[0.16em] text-black/45">Personalizado</span><strong class="mt-2 block text-sm">Lunes a viernes</strong></div></div></div></div></div></section>
+
+<!-- 07 · CIERRE -->
+<section class="relative overflow-hidden bg-[#080808] px-5 py-24 text-center text-white sm:px-8 lg:px-12 lg:py-32"><span class="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 select-none text-[clamp(10rem,24vw,22rem)] font-semibold tracking-[-0.09em] text-white/[0.015] lg:block" aria-hidden="true">ENGLISH</span><div class="relative mx-auto max-w-4xl"><span class="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#d4af37]">Your next step starts here</span><h2 class="mt-7 text-[clamp(2.7rem,6vw,5rem)] font-semibold leading-[1.03] tracking-[-0.055em]">Comienza con una palabra. <span class="block text-white/40">Continúa con confianza.</span></h2><p class="mx-auto mt-7 max-w-xl text-sm leading-7 text-white/55 sm:text-base">Encuentra una forma de aprender inglés que se adapte a ti en Centro Educativo AD.</p><a href="https://forms.gle/FCtpCZhHXxbjRdPo7" target="_blank" rel="noopener noreferrer" class="mt-9 inline-flex min-h-14 w-full items-center justify-center gap-6 rounded-full bg-[#d4af37] px-7 text-sm font-semibold text-black transition hover:bg-[#e8c960] sm:w-auto">Inscríbete ahora <span aria-hidden="true">↗</span></a><div class="mt-16 border-t border-white/10 pt-6 text-[9px] uppercase tracking-[0.18em] text-white/35">Centro Educativo AD · Huixquilucan</div></div></section>
