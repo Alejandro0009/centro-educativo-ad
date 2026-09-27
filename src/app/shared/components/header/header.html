@@ -2,178 +2,77 @@
   class="header"
   [class.header--scrolled]="scrolled()"
 >
-
-  <!-- =========================================================
-       BARRA PRINCIPAL
-  ========================================================== -->
-
   <div class="header__shell">
-
     <div class="header__container">
 
-      <!-- =====================================================
-           BRAND
-      ====================================================== -->
-
+      <!-- Marca -->
       <a
         class="header__brand"
         routerLink="/"
         (click)="closeMenu()"
         aria-label="Centro Educativo AD - Inicio"
       >
-
         <div class="header__monogram">
           <span>AD</span>
         </div>
 
         <div class="header__brand-copy">
-
-          <strong>
-            Centro Educativo AD
-          </strong>
-
-          <span>
-            Aprende · Avanza · Alcanza
-          </span>
-
+          <strong>Centro Educativo AD</strong>
+          <span>Aprende · Avanza · Alcanza</span>
         </div>
-
       </a>
 
+      <!-- Navegación de escritorio -->
+      <nav class="header__nav" aria-label="Navegación principal">
+        <a routerLink="/">Inicio</a>
 
-      <!-- =====================================================
-           NAVEGACIÓN DESKTOP
-      ====================================================== -->
-
-      <nav
-        class="header__nav"
-        aria-label="Navegación principal"
-      >
-
-        <a routerLink="/">
-          Inicio
-        </a>
-
-        <a
-          routerLink="/"
-          fragment="nosotros"
-        >
-          Nosotros
-        </a>
-
-        <a
-          routerLink="/"
-          fragment="servicios"
-        >
-          Servicios
-        </a>
-
-        <a
-          routerLink="/"
-          fragment="programas"
-        >
+        <a routerLink="/" fragment="programas">
           Programas
         </a>
 
-        <a
-          routerLink="/"
-          fragment="ubicacion"
-        >
+        <a routerLink="/" fragment="ubicacion">
           Ubicación
         </a>
 
-
-        <!-- NOTICIAS -->
-
-        <a
-          routerLink="/noticias"
-          class="header__content-link"
-        >
+        <a routerLink="/noticias" class="header__content-link">
           Noticias
         </a>
 
-
-        <!-- ECOEMS -->
-
-        <a
-          routerLink="/ecoems"
-          class="header__ecoems"
-        >
-
+        <a routerLink="/ingles" class="header__ecoems">
           <span class="header__ecoems-dot"></span>
-
-          ECOEMS
-
-        </a>
-
-
-        <!-- UNIVERSIDAD -->
-
-        <a
-          routerLink="/universidad"
-          class="header__ecoems"
-        >
-
-          <span class="header__ecoems-dot"></span>
-
-          Universidad
-
-        </a>
-
-
-        <!-- INGLÉS -->
-
-        <a
-          routerLink="/ingles"
-          class="header__ecoems"
-        >
-
-          <span class="header__ecoems-dot"></span>
-
           Inglés
-
         </a>
 
+        <a routerLink="/universidad" class="header__ecoems">
+          <span class="header__ecoems-dot"></span>
+          Universidad
+        </a>
 
-        <!-- EMPLEADOS -->
+        <a routerLink="/ecoems" class="header__ecoems">
+          <span class="header__ecoems-dot"></span>
+          ECOEMS
+        </a>
 
-        <a
-          routerLink="/empleados/login"
-          class="header__staff-link"
-        >
+        <a routerLink="/empleados/login" class="header__staff-link">
           Empleados
         </a>
 
+        <a routerLink="/alumnos/login" class="header__staff-link">
+          Alumnos
+        </a>
       </nav>
 
-
-      <!-- =====================================================
-           ACCIONES
-      ====================================================== -->
-
+      <!-- Contacto y botón móvil -->
       <div class="header__actions">
-
-        <!-- WHATSAPP DESKTOP -->
-
         <a
           class="header__cta"
           href="https://wa.me/525588357806?text=Hola%20Centro%20Educativo%20AD.%0A%0AMe%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
           target="_blank"
           rel="noopener noreferrer"
         >
-
-          <span>
-            Contacto
-          </span>
-
-          <i aria-hidden="true">
-            ↗
-          </i>
-
+          <span>Contacto</span>
+          <i aria-hidden="true">↗</i>
         </a>
-
-
-        <!-- BOTÓN HAMBURGUESA -->
 
         <button
           class="header__menu-button"
@@ -183,434 +82,157 @@
           aria-controls="mobile-navigation"
           (click)="toggleMenu()"
         >
-
           <span></span>
           <span></span>
-
         </button>
-
       </div>
 
     </div>
-
   </div>
 
-
-  <!-- =========================================================
-       MENÚ MOBILE
-  ========================================================== -->
-
+  <!-- Menú móvil -->
   @if (menuOpen()) {
-
-    <div
-      id="mobile-navigation"
-      class="header__mobile"
-    >
-
+    <div id="mobile-navigation" class="header__mobile">
       <div class="header__mobile-inner">
 
-
-        <!-- =====================================================
-             CABECERA MOBILE
-        ====================================================== -->
-
         <div class="header__mobile-top">
-
-          <span>
-            Navegación
-          </span>
-
-          <span>
-            AD / 2026
-          </span>
-
+          <span>Navegación</span>
+          <span>Centro Educativo AD</span>
         </div>
 
-
-        <!-- =====================================================
-             ACCESO EMPLEADOS DESTACADO
-        ====================================================== -->
-
-        <a
-          routerLink="/empleados/login"
-          class="header__mobile-staff"
-          (click)="closeMenu()"
-        >
-
-          <div class="header__mobile-staff-icon">
-            AD
-          </div>
-
-
-          <div class="header__mobile-staff-copy">
-
-            <span>
-              Acceso interno
-            </span>
-
-            <strong>
-              Portal de empleados
-            </strong>
-
-            <small>
-              Personal autorizado · Centro Educativo AD
-            </small>
-
-          </div>
-
-
-          <div
-            class="header__mobile-staff-arrow"
-            aria-hidden="true"
-          >
-            →
-          </div>
-
-        </a>
-
-
-        <!-- =====================================================
-             CENTRO EDUCATIVO AD
-        ====================================================== -->
-
+        <!-- Inicio y secciones principales -->
         <div class="header__mobile-section">
-
           <span class="header__mobile-section-label">
-            Centro Educativo AD
+            Sitio principal
           </span>
 
-
           <nav aria-label="Secciones principales">
-
-
-            <!-- 01 · INICIO -->
-
-            <a
-              routerLink="/"
-              (click)="closeMenu()"
-            >
-
-              <span class="header__mobile-number">
-                01
-              </span>
-
-              <strong>
-                Inicio
-              </strong>
-
-              <i aria-hidden="true">
-                →
-              </i>
-
+            <a routerLink="/" (click)="closeMenu()">
+              <span class="header__mobile-number">01</span>
+              <div class="header__mobile-link-copy">
+                <strong>Inicio</strong>
+                <small>Página principal</small>
+              </div>
+              <i aria-hidden="true">→</i>
             </a>
-
-
-            <!-- 02 · NOSOTROS -->
-
-            <a
-              routerLink="/"
-              fragment="nosotros"
-              (click)="closeMenu()"
-            >
-
-              <span class="header__mobile-number">
-                02
-              </span>
-
-              <strong>
-                Nosotros
-              </strong>
-
-              <i aria-hidden="true">
-                →
-              </i>
-
-            </a>
-
-
-            <!-- 03 · SERVICIOS -->
-
-            <a
-              routerLink="/"
-              fragment="servicios"
-              (click)="closeMenu()"
-            >
-
-              <span class="header__mobile-number">
-                03
-              </span>
-
-              <strong>
-                Servicios
-              </strong>
-
-              <i aria-hidden="true">
-                →
-              </i>
-
-            </a>
-
-
-            <!-- 04 · PROGRAMAS -->
 
             <a
               routerLink="/"
               fragment="programas"
               (click)="closeMenu()"
             >
-
-              <span class="header__mobile-number">
-                04
-              </span>
-
-              <strong>
-                Programas
-              </strong>
-
-              <i aria-hidden="true">
-                →
-              </i>
-
+              <span class="header__mobile-number">02</span>
+              <div class="header__mobile-link-copy">
+                <strong>Programas</strong>
+                <small>Opciones académicas</small>
+              </div>
+              <i aria-hidden="true">→</i>
             </a>
-
-
-            <!-- 05 · UBICACIÓN -->
 
             <a
               routerLink="/"
               fragment="ubicacion"
               (click)="closeMenu()"
             >
-
-              <span class="header__mobile-number">
-                05
-              </span>
-
-              <strong>
-                Ubicación
-              </strong>
-
-              <i aria-hidden="true">
-                →
-              </i>
-
-            </a>
-
-          </nav>
-
-        </div>
-
-
-        <!-- =====================================================
-             CONTENIDO
-        ====================================================== -->
-
-        <div class="header__mobile-section">
-
-          <span class="header__mobile-section-label">
-            Contenido
-          </span>
-
-
-          <nav aria-label="Contenido">
-
-            <a
-              routerLink="/noticias"
-              (click)="closeMenu()"
-            >
-
-              <span class="header__mobile-number">
-                06
-              </span>
-
-
+              <span class="header__mobile-number">03</span>
               <div class="header__mobile-link-copy">
-
-                <strong>
-                  Noticias
-                </strong>
-
-                <small>
-                  Novedades del centro
-                </small>
-
+                <strong>Ubicación</strong>
+                <small>Encuentra el centro</small>
               </div>
-
-
-              <i aria-hidden="true">
-                →
-              </i>
-
+              <i aria-hidden="true">→</i>
             </a>
 
+            <a routerLink="/noticias" (click)="closeMenu()">
+              <span class="header__mobile-number">04</span>
+              <div class="header__mobile-link-copy">
+                <strong>Noticias</strong>
+                <small>Novedades del centro</small>
+              </div>
+              <i aria-hidden="true">→</i>
+            </a>
           </nav>
-
         </div>
 
-
-        <!-- =====================================================
-             PROGRAMAS ACADÉMICOS
-        ====================================================== -->
-
+        <!-- Programas -->
         <div class="header__mobile-section">
-
           <span class="header__mobile-section-label">
             Programas académicos
           </span>
 
-
           <nav aria-label="Programas académicos">
+            <a routerLink="/ingles" (click)="closeMenu()">
+              <span class="header__mobile-number">05</span>
+              <div class="header__mobile-link-copy">
+                <strong>Inglés</strong>
+                <small>Clases y niveles</small>
+              </div>
+              <i aria-hidden="true">→</i>
+            </a>
 
-
-            <!-- 07 · ECOEMS -->
+            <a routerLink="/universidad" (click)="closeMenu()">
+              <span class="header__mobile-number">06</span>
+              <div class="header__mobile-link-copy">
+                <strong>Universidad</strong>
+                <small>Preparación de ingreso</small>
+              </div>
+              <i aria-hidden="true">→</i>
+            </a>
 
             <a
               routerLink="/ecoems"
               class="header__mobile-ecoems"
               (click)="closeMenu()"
             >
-
-              <span class="header__mobile-number">
-                07
-              </span>
-
-
+              <span class="header__mobile-number">07</span>
               <div class="header__mobile-link-copy">
-
-                <strong>
-                  ECOEMS
-                </strong>
-
-                <small>
-                  Ciclo 2026–2027
-                </small>
-
+                <strong>ECOEMS</strong>
+                <small>Preparación académica</small>
               </div>
-
-
-              <span class="header__mobile-new">
-                Nuevo
-              </span>
-
-
-              <i aria-hidden="true">
-                ↗
-              </i>
-
+              <i aria-hidden="true">→</i>
             </a>
-
-
-            <!-- 08 · UNIVERSIDAD -->
-
-            <a
-              routerLink="/universidad"
-              class="header__mobile-ecoems"
-              (click)="closeMenu()"
-            >
-
-              <span class="header__mobile-number">
-                08
-              </span>
-
-
-              <div class="header__mobile-link-copy">
-
-                <strong>
-                  Universidad
-                </strong>
-
-                <small>
-                  Preparación de ingreso
-                </small>
-
-              </div>
-
-
-              <i aria-hidden="true">
-                ↗
-              </i>
-
-            </a>
-
-
-            <!-- 09 · INGLÉS -->
-
-            <a
-              routerLink="/ingles"
-              class="header__mobile-ecoems"
-              (click)="closeMenu()"
-            >
-
-              <span class="header__mobile-number">
-                09
-              </span>
-
-
-              <div class="header__mobile-link-copy">
-
-                <strong>
-                  Inglés
-                </strong>
-
-                <small>
-                  Formación progresiva
-                </small>
-
-              </div>
-
-
-              <i aria-hidden="true">
-                ↗
-              </i>
-
-            </a>
-
           </nav>
-
         </div>
 
+        <!-- Accesos -->
+        <div class="header__mobile-section">
+          <span class="header__mobile-section-label">
+            Accesos
+          </span>
 
-        <!-- =====================================================
-             PROGRAMA DESTACADO
-        ====================================================== -->
-
-        <a
-          routerLink="/ecoems"
-          class="header__mobile-program"
-          (click)="closeMenu()"
-        >
-
-          <div>
-
-            <span>
-              Programa destacado
-            </span>
-
-            <strong>
-              ECOEMS 2026–2027
-            </strong>
-
-            <p>
-              Conoce fechas, modalidad y preparación académica.
-            </p>
-
-          </div>
-
-
-          <div
-            class="header__mobile-program-arrow"
-            aria-hidden="true"
+          <a
+            routerLink="/empleados/login"
+            class="header__mobile-staff"
+            (click)="closeMenu()"
           >
-            ↗
-          </div>
+            <div class="header__mobile-staff-icon">AD</div>
+            <div class="header__mobile-staff-copy">
+              <span>Acceso interno</span>
+              <strong>Empleados</strong>
+              <small>Portal del personal</small>
+            </div>
+            <div class="header__mobile-staff-arrow" aria-hidden="true">
+              →
+            </div>
+          </a>
 
-        </a>
+          <a
+            routerLink="/alumnos/login"
+            class="header__mobile-staff"
+            (click)="closeMenu()"
+          >
+            <div class="header__mobile-staff-icon">AD</div>
+            <div class="header__mobile-staff-copy">
+              <span>Área de aprendizaje</span>
+              <strong>Alumnos</strong>
+              <small>Materiales y avisos</small>
+            </div>
+            <div class="header__mobile-staff-arrow" aria-hidden="true">
+              →
+            </div>
+          </a>
+        </div>
 
-
-        <!-- =====================================================
-             CONTACTO WHATSAPP
-        ====================================================== -->
-
+        <!-- Contacto -->
         <a
           class="header__mobile-cta"
           href="https://wa.me/525588357806?text=Hola%20Centro%20Educativo%20AD.%0A%0AMe%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
@@ -618,64 +240,16 @@
           rel="noopener noreferrer"
           (click)="closeMenu()"
         >
-
-          <span>
-            Escribir por WhatsApp
-          </span>
-
-          <span aria-hidden="true">
-            ↗
-          </span>
-
+          <span>Escribir por WhatsApp</span>
+          <span aria-hidden="true">↗</span>
         </a>
 
-
-        <!-- =====================================================
-             RECORDATORIO ACCESO INTERNO
-        ====================================================== -->
-
-        <div class="header__mobile-access-note">
-
-          <div class="header__mobile-access-note-icon">
-            AD
-          </div>
-
-          <div>
-
-            <span>
-              Área privada
-            </span>
-
-            <p>
-              El acceso de empleados está disponible al inicio
-              de este menú.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <!-- =====================================================
-             FOOTER MOBILE
-        ====================================================== -->
-
         <div class="header__mobile-footer">
-
-          <span>
-            Centro Educativo AD
-          </span>
-
-          <span>
-            Palo Solo · Huixquilucan
-          </span>
-
+          <span>Centro Educativo AD</span>
+          <span>Palo Solo · Huixquilucan</span>
         </div>
 
       </div>
-
     </div>
-
   }
-
 </header>

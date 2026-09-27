@@ -71,6 +71,41 @@ export const routes: Routes = [
     ]
   },
 
+    // =========================================================
+  // ÁREA INTERNA · ALUMNOS
+  // =========================================================
+
+  {
+    path: 'alumnos',
+
+    children: [
+      // LOGIN · /alumnos/login
+      {
+        path: 'login',
+
+        loadComponent: () =>
+          import('./features/students/auth/login/login')
+            .then(m => m.Login)
+      },
+
+      // HOME · /alumnos/home
+      {
+        path: 'home',
+
+        loadComponent: () =>
+          import('./features/students/home/home')
+            .then(m => m.Home)
+      },
+
+      // /alumnos → /alumnos/login
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'login'
+      }
+    ]
+  },
+
 
   // =========================================================
   // SITIO PÚBLICO
