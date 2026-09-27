@@ -21,7 +21,7 @@ export interface ScheduleClass {
   studentName: string;
 
   subject: string;
-
+ 
   modality:
     'Presencial' | 'En línea';
 }
